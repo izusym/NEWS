@@ -1,13 +1,19 @@
 {
  "date": "2026-10-14",
- "collected": "2026-10-14 22:29",
- "verdict": "\"더 물타기 할 돈도 없다\"…개미 실탄 고갈에 6천피 붕괴 '초읽기' [분석+]",
+ "collected": "2026-10-14 22:45",
  "headlines": [
   {
    "title": "\"더 물타기 할 돈도 없다\"…개미 실탄 고갈에 6천피 붕괴 '초읽기' [분석+]",
    "link": "https://www.hankyung.com/article/2026101418086",
    "source": "한국경제",
    "pub": "2026-10-14T13:00:02.000Z",
+   "summary": ""
+  },
+  {
+   "title": "“증시 부양 동원됐나” “당시 국장 낙관”…국민연금 ‘리밸런싱 유예’ 국감 공방",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBzb1FJLUdoS2ppSlVQM0tmWjFHWDg5aDAxaVhCTlFMZnN3X3B1cDBaRXRuOGQtZVhTSlRXYlJpZWdnZUFKVXdDejR4dHdZUzI1bzU3bnBSZ0pkZ9IBX0FVX3lxTFBPN2wtZ0tmWGpmV0xPSmR2b3hQaExEdGVLOE0xSlJSb052b1pUWjJJN1JiRHZRVGVmOFlqTWtyeUktcjhoWnNVRGs5dEdFMi1ZR3F2SDEyNTdpcmJfOXlj?oc=5",
+   "source": "경향신문",
+   "pub": "2026-10-14T12:46:00.000Z",
    "summary": ""
   },
   {
@@ -18,11 +24,53 @@
    "summary": ""
   },
   {
+   "title": "증시 '검은 화요일'에 600억 반대매매 '비명'…두 달여 만에 최대",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9WUjFtM2lFNUJyTTlvZWtZMGZfV2F5Q1ZrRnBmbjVzVno2azhiYUgzVXo1WVhQTDdQNFVnYnBYMzBfMmtLWG1HRXJTRkJxdkpIZk5CeG5yVmdadw?oc=5",
+   "source": "한국경제",
+   "pub": "2026-10-14T12:30:40.000Z",
+   "summary": ""
+  },
+  {
+   "title": "뉴욕증시 개장 전 특징주...블랙록·게임스탑·앨버말↑ VS ASML·델·휴렛팩커드↓",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9iQ1pqUHJrMTVlVVRIM0xKY1I0Z3RBQVNRUHlTTzljU3JGUFVrNzUzUHFFbnRTa0t0N2hfOTVEWjVjdVNPS1ktbkRZYjNLcTRpMC1NSnVyN003Ry1i?oc=5",
+   "source": "뉴스핌",
+   "pub": "2026-10-14T12:23:00.000Z",
+   "summary": ""
+  },
+  {
+   "title": "뉴욕증시 프리뷰, 미 주가선물 혼조...물가 발표 앞두고 관망 속 AI주 반등",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA0MDRENDdGUlZEMGlTcnQ5MVB4SF9KMEdLd1UwNjhfUmczLTB4ZmJSUGdEMkR2dmpjN1lnNUNsVTd5VlpnZkVqYkFITUVfY056RHNzRVFfd1J0Mndp?oc=5",
+   "source": "뉴스핌",
+   "pub": "2026-10-14T12:07:00.000Z",
+   "summary": ""
+  },
+  {
+   "title": "코스피, 반등 실패…6,000선 간신히 사수",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1XY09TeTdLSi1sbHIyLWw4dTk3aXVkS3o3LWljdWxZdTJpUjlVbmwtWEYzYUF5TGFRRk9kdHM5S09XRUhRRVpabDFtX3pFRXFLM2o2c0tTMW5QVVV2dUpsVUlDYVAxQ2s?oc=5",
+   "source": "연합뉴스TV",
+   "pub": "2026-10-14T11:53:00.000Z",
+   "summary": ""
+  },
+  {
+   "title": "증시 흔든 창신메모리의 경고…‘반도체 쏠림’ 경제 부담으로",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5GY29OYlVUVlEyNnRoN2FUdEJZOXVSem1HZDFCZFVaWldOY2hITzJQZVdwNzVGNzBDODBTQ2ZPWTd2bjlvQjlmRlFsRTNta1BqYl9HRnF0QkFkd9IBX0FVX3lxTE1rNXh3QmF3ZXd5ZGgxbUVVZGN6ZEFHUkhielF5cVhNRlVsc0JUYW1rbEVuTF83NHdzUlpITFJ1UzRLdmtYRlJJWW90TDFrOTV2QWExWFZkbnd6dVZOS1Z3?oc=5",
+   "source": "경향신문",
+   "pub": "2026-10-14T11:45:00.000Z",
+   "summary": ""
+  },
+  {
    "title": "제이알글로벌리츠, 자율구조조정 협의기간 내달 13일까지 연장",
    "link": "https://www.yna.co.kr/view/AKR20261014180000008",
    "source": "연합뉴스",
    "pub": "2026-10-14T10:41:35.000Z",
    "summary": "(서울=연합뉴스) 정회인 기자 = 제이알글로벌리츠[348950]는 서울회생법원이 자율구조조정프로그램(ARS) 협의 기간을 다음 달 13일까지 한..."
+  },
+  {
+   "title": "[종목상담 주식민원처리반] 전장용 제품 수요 확대 따른 실적 기대 '삼화전기'",
+   "link": "https://www.mt.co.kr/stock/2026/10/14/2026101418527032556",
+   "source": "머니투데이",
+   "pub": "2026-10-14T10:36:13.000Z",
+   "summary": "▶ 진행 - 신유정 앵커 ▶ 출연 - 박진섭 MTNW 어드바이저 ▶▶▶ 박진섭의 황금선 투자 ▶ 황금선 급등 종목 BEST5 이수스페셜티케미컬 > 전고체용 황화리튬 양산 기대 롯데에너지머티리얼즈 >"
   },
   {
    "title": "당국 \"금융사 침해사고 발생 총 16곳…약 10만건 유출\"(종합2보)",
@@ -86,6 +134,13 @@
    "source": "한국경제",
    "pub": "2026-10-14T08:33:35.000Z",
    "summary": ""
+  },
+  {
+   "title": "휴맥스, 50억원 유상증자…주식회사 제이투비에 제3자배정",
+   "link": "https://www.yna.co.kr/view/AKR20261014163100008",
+   "source": "연합뉴스",
+   "pub": "2026-10-14T08:30:59.000Z",
+   "summary": "(서울=연합뉴스) 코스닥 상장사 휴맥스[115160]는 운영자금 등 약 50억원을 조달하고자 제3자배정 유상증자를 결정했다고 14일 공시했다."
   }
  ]
 }

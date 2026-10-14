@@ -1,8 +1,63 @@
 {
  "date": "2026-10-14",
- "collected": "2026-10-14 22:29",
- "verdict": "앤트로픽 \"소형 AI, IoT 기기 감염해 자율 복제하는 'AI 웜' 수준 도달\"",
+ "collected": "2026-10-14 22:45",
  "headlines": [
+  {
+   "title": "농식품부, 내년부터 AI 농업로봇 보급 지원…김종구 차관 현장 방문",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1Va0FheXhwNmw1UXQ3cktmMEYwN1BaME5YMGxIMWdiSDJ6cE5QRThBQ0tYdk42dGJCTHJlalJkcE1LQ0haa3ptUV95NWN3aHBYOGJld1dXdjN3eFNrNC1Vdkk2cVc3SzVtVkM3aVN0MTNOcG9I?oc=5",
+   "source": "부산일보",
+   "pub": "2026-10-14T13:09:00.000Z",
+   "summary": ""
+  },
+  {
+   "title": "피지컬 AI·자율주행 로봇 분야 경쟁력 입증했죠",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFAwdjRRc0J4dklSOGREZUZrUnQ1Q3k4clNlam00WGlLOVIxOUh0Tk91bXZxUlNtd2xrQmpaRGw5YkNLWEc3blZ4ZjBVZjJTc0tEZEFVRExNbTc1WldyNFBMMWc0U0JHbVVTTGc?oc=5",
+   "source": "경남매일",
+   "pub": "2026-10-14T12:53:55.000Z",
+   "summary": ""
+  },
+  {
+   "title": "호주가 초등학생에게 인공지능 사용을 권장하지 않는 이유는 무엇일까요?",
+   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPdWRhcDQ4SXRhVjZTU0J4Szg3VmJhYXE0X3NSUkdSQ01QTUw0ODNsT0NUVkNBMU5kbjVUR2RVeFRvRGlEbVBYS0VRNWIxRHVCNWNPVlpJV1p3aGZpS2RwN1RRUjQ2VXVDUFBBU2Q4M2RBRmplT05LdmZwSEhOUWZGeGxPVWRoRDJkeGc?oc=5",
+   "source": "Vietnam.vn",
+   "pub": "2026-10-14T12:50:34.000Z",
+   "summary": ""
+  },
+  {
+   "title": "인공지능 시대에 학생들은 학교의 기대와 시장의 요구 사이에서 '어려운 상황'에 놓여 있다.",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQzJ0WXVZRWZsZDI4TndNOGlHQ1VZd2NTVENkeno4dk1FYjZFSC1QY1hid29vS1F1dlZSdUdla2JkZXc1Ym9TVzM1Smk4bkJPamxqVFJ3WlNKUjFvdTh5VHZ2bzItdDlzdWxsQ0xpbFp5dGtPTm83V2lEY2pkYm4xeHROclRISzRUd01jZ0VtZXdXODNoMFdUQk00Mnd6M0MyMFBJTQ?oc=5",
+   "source": "Vietnam.vn",
+   "pub": "2026-10-14T12:39:08.000Z",
+   "summary": ""
+  },
+  {
+   "title": "\"CES 2027, AI로 어떤 일 일어날지 볼 수 있을 것\"",
+   "link": "https://zdnet.co.kr/view/?no=20261014213104",
+   "source": "ZDNet Korea",
+   "pub": "2026-10-14T12:36:17.000Z",
+   "summary": "[지디넷코리아]\"CES 2027에선 인공지능(AI)으로 실제 어떤 일이 일어날지 보게 될 것\"이라고 킨제이 파브리치오 미국 소비자기술협회(CTA) 회장 겸 최고경영자(CEO)가 14일 밝혔다. CE"
+  },
+  {
+   "title": "앤트로픽, 깃 대신 쓰는 자체 코드 관리 시스템 '사이언' 공개",
+   "link": "https://zdnet.co.kr/view/?no=20261014212553",
+   "source": "ZDNet Korea",
+   "pub": "2026-10-14T12:25:53.000Z",
+   "summary": "[지디넷코리아]앤트로픽이 현지 시각 10월 13일 회사 엔지니어링 블로그를 통해 자체 개발한 코드 관리 시스템 '사이언(Scion)'을 공개했다. 사이언은 개발자 대부분이 사용하는 코드 관리 도구 "
+  },
+  {
+   "title": "AI스페라, 싱가포르 '거브웨어 2026' 참여... 'AITEM' 소개",
+   "link": "https://zdnet.co.kr/view/?no=20261014202006",
+   "source": "ZDNet Korea",
+   "pub": "2026-10-14T11:20:06.000Z",
+   "summary": "[지디넷코리아]사이버 위협 인텔리전스 기업 AI스페라(AI SPERA, 대표 강병탁)가 13~15일 싱가포르 샌즈 엑스포 앤 컨벤션센터에서 열린 사이버보안 행사 ‘거브웨어(GovWare) 2026’"
+  },
+  {
+   "title": "슈퍼마이크로, 통합 오픈 컴퓨팅 프로젝트 포트폴리오 확대로 랙 스케일 AI 데이터센터 배포 가속",
+   "link": "https://zdnet.co.kr/view/?no=20261014201002",
+   "source": "ZDNet Korea",
+   "pub": "2026-10-14T11:10:02.000Z",
+   "summary": "[지디넷코리아] 랙 스케일 AI/HPC 시스템, ORv3 및 ORW 랙, 48V DC 전원, 네트워킹, 액체 냉각 솔루션을 아우르는 통합 오픈 컴퓨팅 프로젝트(OCP) 기반 포트폴리오로 기존 및 신"
+  },
   {
    "title": "앤트로픽 \"소형 AI, IoT 기기 감염해 자율 복제하는 'AI 웜' 수준 도달\"",
    "link": "https://www.aitimes.com/news/articleView.html?idxno=216242",
@@ -32,13 +87,6 @@
    "summary": "구글이 로봇이 실제 환경을 이해하고 스스로 작업 방법을 개선하도록 돕는 AI 기술 개발에 나섰다. 물리 법칙과 3D 공간을 추론하고 가상 시뮬레이션에서 동작을 검증하는 방식으로, 로봇의 정교한 조작"
   },
   {
-   "title": "Z.ai, 법률 특화 모델 'GLM-리걸' 출시...벤치마크서 '페이블 5' 제치고 1위",
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=216260",
-   "source": "AI타임스",
-   "pub": "2026-10-14T08:12:36.000Z",
-   "summary": "중국 Z.ai(지푸 AI)가 법률 문서 분석부터 최종 결과물 작성까지 수행하도록 설계한 특화 모델을 선보였다. 법률 에이전트 성능 평가에서 앤트로픽의 '클로드 페이블 5'와 문샷 AI의 '키미 K3"
-  },
-  {
    "title": "조 차이 알리바바 회장, “오픈소스가 유럽 AI 주권의 기회”…승부처는 컴퓨팅 인프라",
    "link": "https://www.aitimes.kr/news/articleView.html?idxno=42305",
    "source": "인공지능신문",
@@ -46,25 +94,18 @@
    "summary": "차이충신(조 차이-Joe Tsai) 알리바바그룹 회장이 오픈소스 인공지능(AI)을 유럽의 기술 주권 확보를 위한 핵심 기회로 제시했다. 유럽 기업들이 공개된 모델을 자체 인프라에서 운영하고 산업 현"
   },
   {
-   "title": "스페이스XSI, X·그록·커서 통합한 월 구독 패키지 출시",
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=216258",
-   "source": "AI타임스",
-   "pub": "2026-10-14T08:07:35.000Z",
-   "summary": "스페이스XSI가 그록과 커서, X 프리미엄을 결합한 상품을 선보이며 AI 서비스 구독 시장에서 오픈AI와 앤트로픽에 도전장을 내밀었다. 스페이스XSI는 13일(현지시간) X의 유료 서비스와 AI 챗"
-  },
-  {
-   "title": "[게시판] 롯데이노베이트, CMC그룹과 베트남 데이터센터 사업 확장 등 단신",
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=216266",
-   "source": "AI타임스",
+   "title": "공공 에이전틱 AI 도입 문 넓어진다…주요 AI 플랫폼 등록 이어져",
+   "link": "https://www.etnews.com/20261014000115",
+   "source": "전자신문",
    "pub": "2026-10-14T08:00:00.000Z",
-   "summary": "■ 롯데이노베이트(대표 김경엽)는 베트남 하노이에서 현지 IT 기업 CMC그룹과 전략적 사업 협력을 위한 업무협약(MOU)을 체결했다고 밝혔다. 양사는 하이퍼스케일 데이터센터, 전기차 충전사업(CP"
+   "summary": "공공기관이 업무에 맞는 인공지능(AI) 플랫폼을 신속하게 도입할 수 있는 조달 선택지가 넓어졌다. LG CNS와 삼성SDS의 AI 플랫폼이 디지털서비스 이용지원시스템에 등록되면서 기관이 개발·운영 "
   },
   {
-   "title": "Arm, 퀄컴과의 라이선스 계약 위반 소송서 패소...손해배상금은 2달러에 불과",
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=216263",
-   "source": "AI타임스",
-   "pub": "2026-10-14T07:50:00.000Z",
-   "summary": "반도체 설계 기업 Arm이 퀄컴과의 소송에서 불리한 평결을 받았다. 배심원단은 계약 위반과 사업 방해를 인정했으나, 손해배상금은 명목상 금액인 2달러만 부과했다.미국 델라웨어주 배심원단은 13일(현"
+   "title": "콜마, 사내 AI 에이전트 도입…생산부터 연구까지 전사 AX 가속",
+   "link": "https://www.etnews.com/20261013000249",
+   "source": "전자신문",
+   "pub": "2026-10-14T08:00:00.000Z",
+   "summary": "한국콜마가 사내 인공지능(AI) 에이전트 플랫폼을 도입해 전사 인공지능 전환(AX)을 가속한다. 제조·생산 현장뿐 아니라 연구·영업·기획 등 전 업무 영역으로 활용 범위를 넓혀 전방위적인 AI 활용"
   },
   {
    "title": "멜라니아 트럼프, 2027년 ‘대통령 초지능 챌린지’ 출범…학교별 AI 준비도 인증 도입",
@@ -81,11 +122,25 @@
    "summary": "영국과 캐나다가 고성능 인공지능(AI)의 역량 발전에 따른 위험에 공동 대응하기 위해 AI 안보 협력을 강화한다. 양국은 프런티어 AI의 역량과 잠재적 위험에 관한 정보 공유를 확대하고, AI 평가"
   },
   {
-   "title": "구글, AI '바이브 코딩' 앱 비공개 실행 기능 도입…\"개발자 등록 필요 없어\"",
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=216259",
-   "source": "AI타임스",
-   "pub": "2026-10-14T07:29:45.000Z",
-   "summary": "구글이 안드로이드 사용자를 대상으로 정식 개발자 등록 절차 없이, 플레이 스토어를 통해 AI로 제작한 자신만의 맞춤형 애플리케이션을 간편하게 실행할 수 있는 새로운 생태계 혁신을 단행했다.구글은 1"
+   "title": "삼성전자, 반도체 협력사에 “AI로 장비 고장·오류 사전 대응” 주문...장비업계 기술 전략 바뀌나",
+   "link": "https://www.etnews.com/20261014000307",
+   "source": "전자신문",
+   "pub": "2026-10-14T07:30:00.000Z",
+   "summary": "삼성전자가 국내외 주요 반도체 장비 협력사에 제조 공정 내 인공지능(AI) 적용을 주문했다. 반도체 장비 오류·결함을 사전에 파악, 인적 개입을 최소화하고 생산성을 대폭 끌어올리려는 시도다. 14일"
+  },
+  {
+   "title": "LG전자, AI 가전·히트펌프·태양광 결합한 에너지 자립형 주택 선보여",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42302",
+   "source": "인공지능신문",
+   "pub": "2026-10-14T07:20:57.000Z",
+   "summary": "LG전자(대표이사 류재철)가 인공지능(AI) 가전과 냉난방공조(HVAC), 에너지 관리 기술을 결합한 에너지 자립형 모듈러 주택 ‘LG 스마트코티지’를 통해 미래 주거 솔루션을 선보였다.LG전자는 "
+  },
+  {
+   "title": "면 뽑고 불량 잡고…라면업계 'AI 러시'",
+   "link": "https://www.etnews.com/20261014000147",
+   "source": "전자신문",
+   "pub": "2026-10-14T07:03:00.000Z",
+   "summary": "라면업계가 생산 현장에 인공지능(AI)을 활용해 제조 경쟁력 강화에 나섰다. 수출 제품의 표시 오류를 잡고 면 두께와 수분 함량을 예측해 설비를 제어하는 등 활용 범위를 넓히고 있다. 제품 생산 효"
   }
  ]
 }
