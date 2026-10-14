@@ -1,63 +1,88 @@
 {{HEAD}}<style>
 /* 메인: 카테고리 = LP 슬리브. 가로로 넘기면 가운데 판이 올라오고, 누르면 뉴스가 바퀴처럼 도는 목록 */
-body{padding:0;overflow-x:hidden}
-.glow{position:fixed;left:-20%;right:-20%;top:-25%;height:70vh;background:var(--g,var(--news));opacity:.22;filter:blur(90px);border-radius:50%;transition:background-color .7s;pointer-events:none;z-index:-1}
-.view{max-width:640px;margin:0 auto;padding:28px 0 40px;display:flex;flex-direction:column;gap:6px}
+body{position:relative;overflow-x:hidden;padding-bottom:150px}
+.glow{position:absolute;inset:0 0 auto;height:520px;background:radial-gradient(60% 55% at 50% 30%,color-mix(in srgb,var(--g,var(--amber)) 30%,transparent),transparent 70%);transition:background .8s;pointer-events:none;z-index:0}
+.view{position:relative;z-index:1;padding:max(20px,env(safe-area-inset-top)) 0 0;display:flex;flex-direction:column}
 .view[hidden]{display:none}
 .pad{padding:0 20px}
-.view h1,.view h2{font:700 34px/1.1 var(--body);margin:0}
-.lead{margin:0;color:var(--muted)}
-.lead em{font-family:Georgia,serif;color:var(--g,var(--news));transition:color .7s}
+.eyebrow{display:block;margin-bottom:6px}
+.view h1,.view h2{font:800 30px/1.1 var(--display);letter-spacing:-.04em;margin:0}
+.lead{margin:2px 0 0;font:italic 400 20px/1.3 var(--serif);color:var(--muted)}
+.lead em{color:var(--g,var(--amber));transition:color .8s}
 
 /* 가로 캐러셀: 네이티브 scroll-snap, 크기·기울기만 JS */
-.crates{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:80px calc(50% - 115px) 20px;perspective:800px}
+.crates{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:84px calc(50% - 110px) 24px;perspective:900px}
 .crates::-webkit-scrollbar{display:none}
-.crate{flex:none;width:230px;aspect-ratio:1/1.12;scroll-snap-align:center;position:relative;border:0;background:none;padding:0;cursor:pointer;font:inherit;will-change:transform}
-.crate:focus-visible{outline:2px solid var(--fg);outline-offset:6px;border-radius:12px}
-.disc{position:absolute;left:12%;right:12%;top:6%;aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,#0c0c0f 0 2px,#1d1d23 2px 4px);box-shadow:0 6px 24px #0008;display:grid;place-items:center;transition:transform .7s cubic-bezier(.2,1.3,.4,1)}
-.disc .lbl{width:34%;aspect-ratio:1;border-radius:50%;background:var(--c);display:grid;place-items:center;font:700 13px var(--body);color:#111}
-.crate.on .disc{transform:translateY(-36%) rotate(220deg)}
-.sleeve{position:absolute;left:0;right:0;bottom:0;height:89%;border-radius:10px;background:linear-gradient(160deg,color-mix(in srgb,var(--c) 92%,#fff),color-mix(in srgb,var(--c) 68%,#000));box-shadow:0 18px 40px -12px #000a;display:flex;flex-direction:column;padding:14px;text-align:left;overflow:hidden}
-.meta{display:flex;justify-content:space-between;font:700 10px var(--mono);letter-spacing:.1em;color:#111b}
-.hole{position:absolute;left:50%;top:44%;width:38%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:#0005;box-shadow:inset 0 2px 8px #0008}
-.name{margin-top:auto;font:400 44px/1 var(--display);color:#111}
-.caption{text-align:center;min-height:5.5em;transition:opacity .2s}
-.caption.fade{opacity:0}
+.crate{flex:none;width:220px;aspect-ratio:1/1.12;scroll-snap-align:center;position:relative;border:0;background:none;padding:0;cursor:pointer;font:inherit;will-change:transform}
+.disc{position:absolute;left:11%;right:11%;top:5%;aspect-ratio:1;border-radius:50%;
+  background:conic-gradient(from 30deg,#fff0 0 10%,#ffffff14 15%,#fff0 22% 60%,#ffffff10 65%,#fff0 72%),repeating-radial-gradient(circle,#0b0b0d 0 1.5px,#18181c 1.5px 3px);
+  box-shadow:0 10px 30px #000a;display:grid;place-items:center;transition:transform .8s cubic-bezier(.2,1.2,.35,1)}
+.disc .lbl{width:34%;aspect-ratio:1;border-radius:50%;background:var(--c);display:grid;place-items:center;font:700 11px var(--body);letter-spacing:-.02em;color:#141414;box-shadow:inset 0 0 0 4px #0002}
+.crate.on .disc{transform:translateY(-38%) rotate(240deg)}
+.sleeve{position:absolute;inset:auto 0 0;height:88%;border-radius:6px;padding:14px 16px;text-align:left;overflow:hidden;display:flex;flex-direction:column;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E"),linear-gradient(155deg,color-mix(in srgb,var(--c) 88%,#fff),var(--c) 45%,color-mix(in srgb,var(--c) 70%,#000));
+  box-shadow:0 24px 50px -18px #000,inset 0 1px 0 #ffffff40}
+.meta{display:flex;justify-content:space-between;font:500 9px var(--mono);letter-spacing:.12em;color:#0009}
+.hole{position:absolute;left:50%;top:46%;width:36%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:#00000038;box-shadow:inset 0 3px 10px #0007}
+.name{margin-top:auto;font:800 40px/1 var(--display);letter-spacing:-.05em;color:#121212}
+.caption{text-align:center;min-height:6.2em;padding:0 28px;transition:opacity .25s,transform .25s}
+.caption.fade{opacity:0;transform:translateY(4px)}
 .caption p{margin:0}
-.caption .v{font-family:Georgia,"Noto Serif KR",serif;font-style:italic;font-size:17px;text-wrap:balance}
-.caption .s{font:500 12px var(--mono);color:var(--muted);margin-top:6px}
-.caption .s b{color:var(--g,var(--news))}
+.caption .v{font:500 16px/1.55 var(--body);letter-spacing:-.02em;text-wrap:balance}
+.caption .s{font:500 11px var(--mono);letter-spacing:.04em;color:var(--muted);margin-top:8px}
+.caption .s b{color:var(--g,var(--amber));font-weight:500}
+
+/* 하단: 오늘의 1위 미니 바 + 탭 바 (앱처럼 화면 아래 고정) */
+.dock{position:fixed;bottom:0;left:50%;translate:-50% 0;width:min(100%,440px);z-index:4;padding:0 12px max(10px,env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--bg) 30%)}
+.mini{display:flex;align-items:center;gap:12px;padding:8px 14px 8px 8px;border-radius:16px;background:color-mix(in srgb,var(--card) 85%,transparent);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--line);text-decoration:none;margin-top:24px}
+.mini .art{width:40px;height:40px;font-size:13px}
+.mini .txt b{font-size:13px;-webkit-line-clamp:1}
+.mini .play{flex:none;width:30px;height:30px;border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;font-size:11px}
+.tabbar{display:flex;justify-content:space-around;padding:10px 0 2px}
+.tabbar a,.tabbar button{display:flex;flex-direction:column;align-items:center;gap:3px;font:500 10px var(--body);color:var(--muted);text-decoration:none;background:none;border:0;cursor:pointer;padding:2px 12px}
+.tabbar svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.tabbar .on{color:var(--fg)}
 
 /* 뉴스 바퀴 목록 */
-.bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.ic{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--fg);font-size:20px;cursor:pointer;display:grid;place-items:center;text-decoration:none}
-.wheel{list-style:none;margin:8px 0 0;padding:calc(30vh - 36px) 20px;height:60vh;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none;-webkit-mask:linear-gradient(transparent,#000 22%,#000 78%,transparent);mask:linear-gradient(transparent,#000 22%,#000 78%,transparent)}
+.bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.wheel{list-style:none;margin:6px 0 0;padding:calc(27vh - 36px) 16px;height:54vh;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none;-webkit-mask:linear-gradient(transparent,#000 24%,#000 76%,transparent);mask:linear-gradient(transparent,#000 24%,#000 76%,transparent)}
 .wheel::-webkit-scrollbar{display:none}
 .wheel li{height:72px;scroll-snap-align:center;transform-origin:left center;will-change:transform}
-.row{--c:var(--news);display:flex;align-items:center;gap:14px;height:64px;padding:6px 10px 6px 6px;border-radius:999px;text-decoration:none;transition:background-color .3s,box-shadow .3s}
+.row{--c:var(--news);display:flex;align-items:center;gap:14px;height:64px;padding:6px 8px 6px 6px;border-radius:999px;text-decoration:none;transition:background-color .3s,box-shadow .3s}
 .row.video{--c:var(--video)} .row.tips{--c:var(--tips)} .row.trend{--c:var(--trend)}
-.art{flex:none;width:52px;height:52px;border-radius:50%;background:radial-gradient(circle,var(--c) 0 40%,#111 41% 44%,color-mix(in srgb,var(--c) 40%,#111) 45%);display:grid;place-items:center;font:400 18px var(--display);color:#111}
-.txt{min-width:0;flex:1;display:flex;flex-direction:column}
-.txt b{font-size:14px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.txt small{font:500 10px var(--mono);color:var(--c)}
-.go{flex:none;font:700 12px var(--body);padding:6px 12px;border-radius:999px;background:var(--fg);color:var(--bg);opacity:0;transform:scale(.6);transition:.3s}
-li.on .row{background:var(--card);box-shadow:0 8px 24px -10px #0008}
+.art{--c:var(--news);flex:none;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font:italic 400 20px var(--serif);color:#141414;
+  background:radial-gradient(circle,var(--c) 0 38%,#0b0b0d 39% 41%,transparent 42%),repeating-radial-gradient(circle,#0b0b0d 0 1.5px,#1a1a1e 1.5px 3px)}
+.art.video{--c:var(--video)} .art.tips{--c:var(--tips)} .art.trend{--c:var(--trend)}
+.txt{min-width:0;flex:1;display:flex;flex-direction:column;gap:1px}
+.txt b{font-size:14px;font-weight:600;letter-spacing:-.02em;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.txt small{font:500 9.5px var(--mono);letter-spacing:.06em;color:var(--c)}
+.go{flex:none;font:600 12px var(--body);padding:7px 14px;border-radius:999px;background:var(--fg);color:var(--bg);opacity:0;transform:scale(.6);transition:.35s cubic-bezier(.2,1.3,.4,1)}
+li.on .row{background:color-mix(in srgb,var(--card) 90%,#fff 4%);box-shadow:0 10px 30px -12px #000,inset 0 0 0 1px var(--line)}
 li.on .go{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 <div class="glow" aria-hidden="true"></div>
 
 <main class="view" id="hub">
-  <div class="pad"><h1>뉴스 모아보기</h1><p class="lead">오늘의 소식을 <em>골라 보세요.</em></p></div>
+  <div class="pad"><span class="eyebrow" id="today"></span><h1>오늘의 뉴스</h1><p class="lead">Dig through the <em>headlines.</em></p></div>
   <div class="crates" aria-label="뉴스 카테고리 (좌우로 넘기기)">{{CRATES}}</div>
-  <div class="caption pad" aria-live="polite"><p class="v"></p><p class="s"></p></div>
+  <div class="caption" aria-live="polite"><p class="v"></p><p class="s"></p></div>
 </main>
 
 <section class="view" id="detail" hidden aria-labelledby="dt">
-  <div class="pad bar"><button class="ic" id="back" aria-label="뒤로">‹</button><a class="ic" id="full" aria-label="카드뉴스 전체 보기" title="카드뉴스 전체 보기">▤</a></div>
-  <div class="pad"><h2 id="dt"></h2><p class="lead" id="dm"></p></div>
+  <div class="pad bar"><button class="ic" id="back" aria-label="뒤로">‹</button><a class="ic" id="full" aria-label="카드뉴스 전체 보기" title="카드뉴스 전체 보기">↗</a></div>
+  <div class="pad"><span class="eyebrow" id="dm"></span><h2 id="dt"></h2><p class="lead">Spin to <em>read.</em></p></div>
   <ol class="wheel" id="wheel"></ol>
 </section>
+
+<nav class="dock" aria-label="하단 메뉴">
+  <a class="mini" id="mini" hidden><span class="art" aria-hidden="true">1</span><span class="txt"><small>TODAY'S NO.1</small><b></b></span><span class="play" aria-hidden="true">▶</span></a>
+  <div class="tabbar">
+    <button class="on" id="homeTab"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/></svg>둘러보기</button>
+    <a id="cardsTab"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>카드뉴스</a>
+    <a id="archTab"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>지난 호</a>
+  </div>
+</nav>
 
 <script>
 const D = {{DATA}};
@@ -67,7 +92,18 @@ const box = $(".crates"), crates = [...box.children], cap = $(".caption"), wheel
 const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
 let cur = -1;
 
-// 각 항목이 목록 가운데에서 몇 칸 떨어졌는지(d) 계산해 style 함수에 넘기고, 가장 가까운 번호를 돌려줌
+// 하단 바: 데이터가 있는 첫 카테고리 기준
+const first = D.find(c => c.items.length);
+if (first) {
+  $("#today").textContent = first.date;
+  const m = $("#mini"), top = first.items[0];
+  m.hidden = false; m.href = top.href;
+  m.querySelector(".art").className = "art " + top.c;
+  m.querySelector("b").textContent = top.t;
+  $("#cardsTab").href = `${first.id}/`; $("#archTab").href = `${first.id}/archive/`;
+}
+
+// 각 항목이 목록 가운데에서 몇 칸 떨어졌는지(d) 계산해 style에 넘기고, 가장 가까운 번호를 돌려줌
 function measure(list, size, x, style) {
   const r = list.getBoundingClientRect(), mid = x ? r.left + r.width / 2 : r.top + r.height / 2;
   let best = 0, bd = Infinity;
@@ -80,11 +116,11 @@ function measure(list, size, x, style) {
 }
 
 function paintCrates() {
-  const i = measure(box, 230, true, (el, d) => {
+  const i = measure(box, 220, true, (el, d) => {
     const a = Math.min(Math.abs(d), 1.6);
-    el.style.transform = `translateX(${-d * 40}px) scale(${1 - a * 0.24}) rotateY(${-d * 14}deg)`;
+    el.style.transform = `translateX(${-d * 44}px) scale(${1 - a * 0.22}) rotateY(${-d * 16}deg)`;
     el.style.zIndex = 10 - Math.round(a * 3);
-    el.style.filter = `brightness(${1 - a * 0.3})`;
+    el.style.filter = `brightness(${1 - a * 0.35}) saturate(${1 - a * 0.3})`;
   });
   if (i === cur) return;
   cur = i;
@@ -94,16 +130,16 @@ function paintCrates() {
   cap.classList.add("fade");
   setTimeout(() => {
     cap.querySelector(".v").textContent = c.verdict;
-    cap.querySelector(".s").innerHTML = c.items.length ? `<b>${c.items.length}건</b> · ${c.date} · 눌러서 보기` : "COMING SOON";
+    cap.querySelector(".s").innerHTML = c.items.length ? `<b>${c.items.length} STORIES</b> · ${c.date} · TAP TO OPEN` : "COMING SOON";
     cap.classList.remove("fade");
-  }, still ? 0 : 160);
+  }, still ? 0 : 180);
 }
 
 function paintWheel() {
   const i = measure(wheel, 72, false, (el, d) => {
     const a = Math.abs(d);
-    el.style.transform = `translateX(${a * a * 10}px) rotate(${d * 7}deg) scale(${Math.max(0.75, 1 - a * 0.07)})`;
-    el.style.opacity = Math.max(0.15, 1 - a * 0.28);
+    el.style.transform = `translateX(${a * a * 11}px) rotate(${d * 7}deg) scale(${Math.max(0.78, 1 - a * 0.07)})`;
+    el.style.opacity = Math.max(0.12, 1 - a * 0.3);
   });
   [...wheel.children].forEach((li, j) => li.classList.toggle("on", j === i));
 }
@@ -127,22 +163,24 @@ function open(i) {
   swap(() => {
     $("#hub").hidden = true; $("#detail").hidden = false;
     $("#dt").textContent = `${c.name} 뉴스`;
-    $("#dm").textContent = `${c.items.length}건 · ${c.date} · 위아래로 돌려 보세요`;
+    $("#dm").textContent = `${c.date} · ${c.items.length} stories`;
     $("#full").href = `${c.id}/`;
-    wheel.innerHTML = c.items.map((x, j) => `<li><a class="row ${x.c}" href="${x.href}"><span class="art">${j + 1}</span><span class="txt"><small>${esc(x.tag)}</small><b>${esc(x.t)}</b></span><span class="go">읽기</span></a></li>`).join("");
+    wheel.innerHTML = c.items.map((x, j) => `<li><a class="row ${x.c}" href="${x.href}"><span class="art ${x.c}">${j + 1}</span><span class="txt"><small>${esc(x.tag)}</small><b>${esc(x.t)}</b></span><span class="go">읽기</span></a></li>`).join("");
     wheel.scrollTop = 0;
     paintWheel();
+    scrollTo(0, 0);
   });
   history.pushState(null, "", `#${c.id}`);
 }
 function close() {
-  swap(() => { $("#detail").hidden = true; $("#hub").hidden = false; paintCrates(); crates[cur].focus(); });
+  swap(() => { $("#detail").hidden = true; $("#hub").hidden = false; paintCrates(); });
 }
 $("#back").onclick = () => history.back();
+$("#homeTab").onclick = () => { if (!$("#detail").hidden) history.back(); };
 addEventListener("popstate", () => { if (!$("#detail").hidden) close(); });
 addEventListener("keydown", e => { if (e.key === "Escape" && !$("#detail").hidden) history.back(); });
 
 paintCrates();
 const start = D.findIndex(c => `#${c.id}` === location.hash);
-if (start >= 0) { box.scrollLeft = crates[start].offsetLeft - box.clientWidth / 2 + 115; paintCrates(); open(start); history.replaceState(null, "", `#${D[start].id}`); }
+if (start >= 0) { box.scrollLeft = crates[start].offsetLeft - box.clientWidth / 2 + 110; paintCrates(); open(start); history.replaceState(null, "", `#${D[start].id}`); }
 </script>

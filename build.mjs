@@ -61,14 +61,14 @@ function renderDay(day, tpl, root, home) {
 // 카테고리: data/<id>/YYYY-MM-DD.json 이 있으면 활성, 없으면 "준비 중" 탭
 // ponytail: 다른 카테고리도 지금은 AI 카드뉴스와 같은 JSON 형식을 가정
 const CATS = [
-  { id: "ai", name: "AI", color: "news" },
-  { id: "economy", name: "경제", color: "tips" },
-  { id: "tech", name: "IT·과학", color: "trend" },
-  { id: "world", name: "세계", color: "video" },
+  { id: "ai", name: "AI", color: "amber" },
+  { id: "economy", name: "경제", color: "rose" },
+  { id: "tech", name: "IT·과학", color: "sage" },
+  { id: "world", name: "세계", color: "slate" },
 ];
 
 const tpl = fs.readFileSync("template.html", "utf8");
-const head = title => tpl.slice(0, tpl.indexOf("<main")).replace("{{TITLE}}", title);
+const head = title => tpl.slice(0, tpl.indexOf("<header")).replace("{{TITLE}}", title);
 const loadDays = id => !fs.existsSync(`data/${id}`) ? [] :
   fs.readdirSync(`data/${id}`).filter(f => /^\d{4}-\d{2}-\d{2}\.json$/.test(f)).sort().reverse()
     .map(f => ({ ...JSON.parse(fs.readFileSync(`data/${id}/${f}`, "utf8")), date: f.slice(0, 10) }));
@@ -83,9 +83,10 @@ for (const cat of CATS) {
   write(p, renderDay(days[0], tpl, "", "../"));
   for (const d of days) write(`${p}${d.date}/`, renderDay(d, tpl, "../", "../../"));
   const list = days.map(d => `<li><a href="../${d.date}/"><span class="n">${d.cards.length}</span><span class="t">${dotDate(d.date)} · ${esc(d.verdict)}</span></a></li>`).join("\n");
-  write(`${p}archive/`, `${head(`${cat.name} 뉴스 지난 호`)}<main class="wrap"><section class="top">
-  <span class="eyebrow">Daily ${esc(cat.name)} News · <a href="../../">메인</a> · <a href="../">최신 호</a></span>
-  <h1>지난 호</h1>
+  write(`${p}archive/`, `${head(`${cat.name} 뉴스 지난 호`)}<header class="appbar"><a class="ic" href="../../" aria-label="메인으로">‹</a><b>${esc(cat.name)} 뉴스</b><a class="ic" href="../" aria-label="최신 호" title="최신 호">↗</a></header>
+<main class="wrap"><section class="top">
+  <span class="eyebrow">Archive · ${days.length} issues</span>
+  <h1>지난 <em>issues</em></h1>
   <nav class="t3" aria-label="날짜별 목록"><h2>${days.length}개 호 · 숫자는 기사 수</h2><ol>
 ${list}
   </ol></nav>
