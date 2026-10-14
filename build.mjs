@@ -23,12 +23,12 @@ const loadDays = id => !fs.existsSync(`data/${id}`) ? [] :
 
 // root: 이 페이지에서 카테고리 폴더까지, home: 사이트 첫 화면까지 상대 경로
 function renderDay(day, cat, root, home) {
-  const list = day.headlines.map((h, i) => `<li><a href="${esc(safeUrl(h.link))}" target="_blank" rel="noopener noreferrer"><span class="n">${i + 1}</span><span class="t">${esc(h.title)}<small class="hs">${esc(h.source)}${h.pub ? " · " + hhmm(h.pub) : ""}${h.summary ? "<br>" + esc(h.summary) : ""}</small></span></a></li>`).join("\n");
+  const list = day.headlines.map((h, i) => `<li><a href="${esc(safeUrl(h.link))}" target="_blank" rel="noopener noreferrer"><span class="n">${i + 1}</span><span class="t">${esc(h.title)}<small class="hs">${esc(h.source)}${h.pub ? " · " + hhmm(h.pub) : ""}${h.n > 1 ? ` · <b>${h.n}곳 보도</b>` : ""}${h.summary ? "<br>" + esc(h.summary) : ""}</small></span></a></li>`).join("\n");
   return `${head(`${cat.name} 헤드라인 ${day.date}`)}${appbar(home, `${cat.name} 헤드라인`, `${root}archive/`, "지난 호", "☰")}
 <main class="wrap"><section class="top">
   <span class="eyebrow">${dotDate(day.date)} · ${day.headlines.length} headlines</span>
   <h1>${esc(cat.name)} <em>headlines</em></h1>
-  <nav class="t3" aria-label="헤드라인"><h2>최근 24시간 · 최신순 · 언론사 RSS</h2><ol>
+  <nav class="t3" aria-label="헤드라인"><h2>최근 24시간 · 많이 보도된 순 · 언론사 RSS</h2><ol>
 ${list}
   </ol></nav>
   <p class="note">수집 ${esc(day.collected ?? day.date)} (KST). 제목을 누르면 언론사 기사로 이동합니다. 투자 등 중요한 판단 전에는 원문을 확인하세요.</p>
@@ -63,7 +63,7 @@ const hubData = CATS.map(c => {
   return {
     id: c.id, name: c.name, color: c.color, date: d ? dotDate(d.date) : "",
     verdict: d ? d.headlines[0].title : "준비 중이에요. 곧 소식을 모아 올게요.",
-    items: !d ? [] : d.headlines.map(h => ({ t: h.title, tag: `${h.source} · ${hhmm(h.pub)}`, c: SRC_COLOR[srcs.indexOf(h.source) % 4], href: safeUrl(h.link), ext: true })),
+    items: !d ? [] : d.headlines.map(h => ({ t: h.title, tag: `${h.source} · ${hhmm(h.pub)}${h.n > 1 ? ` · ${h.n}곳 보도` : ""}`, c: SRC_COLOR[srcs.indexOf(h.source) % 4], href: safeUrl(h.link), ext: true })),
   };
 });
 const crate = (c, i) => `<button class="crate" style="--c:var(--${c.color})" aria-label="${esc(c.name)} 뉴스${c.items.length ? ` ${c.items.length}건` : " (준비 중)"}">
