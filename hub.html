@@ -31,6 +31,7 @@ body{position:relative;overflow-x:hidden;padding-bottom:150px}
 .caption .v{font:500 16px/1.55 var(--body);letter-spacing:-.02em;text-wrap:balance}
 .caption .s{font:500 11px var(--mono);letter-spacing:.04em;color:var(--muted);margin-top:8px}
 .caption .s b{color:var(--g,var(--amber));font-weight:500}
+.stale{color:#e5736b;font-weight:500}
 /* 카테고리별 바로가기 버튼 (예: AI → AI 트렌드) */
 .extra{display:flex;justify-content:center;margin-top:22px}
 .extra[hidden]{display:none}
@@ -92,6 +93,7 @@ li.on .go{opacity:1;transform:none}
 
 <script>
 const D = {{DATA}};
+const UPDATED = "{{UPDATED}}"; // 가장 최근 수집 시각 "YYYY-MM-DD HH:MM" (KST)
 const $ = s => document.querySelector(s);
 const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 const box = $(".crates"), crates = [...box.children], cap = $(".caption"), wheel = $("#wheel");
@@ -101,7 +103,9 @@ let cur = -1;
 // 하단 바: 데이터가 있는 첫 카테고리 기준
 const first = D.find(c => c.items.length);
 if (first) {
-  $("#today").textContent = first.date;
+  // 마지막 업데이트 시각. 26시간 넘게 새 수집이 없으면 자동 수집이 멈춘 것으로 보고 경고
+  const age = (Date.now() - Date.parse(UPDATED.replace(" ", "T") + "+09:00")) / 3600e3;
+  $("#today").innerHTML = `${first.date} · ${UPDATED.slice(11)} 업데이트` + (age > 26 ? ` · <b class="stale">업데이트 지연</b>` : "");
   const m = $("#mini"), top = first.items[0];
   m.hidden = false; m.href = top.href;
   m.querySelector(".art").className = "art " + top.c;

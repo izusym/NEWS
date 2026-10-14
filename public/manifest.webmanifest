@@ -1,0 +1,15 @@
+{
+  "name": "뉴스 모아보기",
+  "short_name": "뉴스",
+  "description": "매일 아침 AI·경제·증시·해외증시 헤드라인",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0c0c0e",
+  "theme_color": "#0c0c0e",
+  "lang": "ko",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

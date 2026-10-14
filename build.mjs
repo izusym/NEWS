@@ -14,7 +14,13 @@ const safeUrl = u => (/^https?:\/\//i.test(u) ? u : "#");
 const dotDate = d => `${d.replaceAll("-", ".")} (${"일월화수목금토"[new Date(d + "T00:00:00Z").getUTCDay()]})`;
 const hhmm = iso => iso ? new Date(Date.parse(iso) + 9 * 3600e3).toISOString().slice(11, 16) : "";
 
-const head = title => fs.readFileSync("template.html", "utf8").replace("{{TITLE}}", esc(title));
+// 공유 미리보기(카톡 등)는 절대 주소가 필요해서 사이트 주소를 고정해 둠
+const SITE = "https://izusym.github.io/NEWS/";
+// path: 사이트 첫 화면 기준 이 페이지 경로(예: "ai/2026-10-14/") → 아이콘·매니페스트 상대 경로와 공유 주소 계산
+const homeOf = path => path.split("/").filter(Boolean).map(() => "../").join("");
+const head = (title, desc, path) => fs.readFileSync("template.html", "utf8")
+  .replaceAll("{{TITLE}}", esc(title)).replaceAll("{{DESC}}", esc(desc)).replaceAll("{{HOME}}", homeOf(path))
+  .replaceAll("{{URL}}", SITE + path).replaceAll("{{SITE}}", SITE);
 const appbar = (home, name, href, label, icon) =>
   `<header class="appbar"><a class="ic" href="${home}" aria-label="메인으로">‹</a><b>${esc(name)}</b><a class="ic" href="${href}" aria-label="${label}" title="${label}">${icon}</a></header>`;
 const loadDays = id => !fs.existsSync(`data/${id}`) ? [] :
@@ -22,10 +28,11 @@ const loadDays = id => !fs.existsSync(`data/${id}`) ? [] :
     .map(f => ({ ...JSON.parse(fs.readFileSync(`data/${id}/${f}`, "utf8")), date: f.slice(0, 10) }))
     .filter(d => d.headlines?.length);
 
-// root: 이 페이지에서 카테고리 폴더까지, home: 사이트 첫 화면까지 상대 경로
-function renderDay(day, cat, root, home) {
+// root: 이 페이지에서 카테고리 폴더까지 상대 경로, path: 사이트 기준 이 페이지 경로
+function renderDay(day, cat, root, path) {
+  const home = homeOf(path);
   const list = day.headlines.map((h, i) => `<li><a href="${esc(safeUrl(h.link))}" target="_blank" rel="noopener noreferrer"><span class="n">${i + 1}</span><span class="t">${esc(h.title)}<small class="hs">${esc(h.source)}${h.pub ? " · " + hhmm(h.pub) : ""}${h.n > 1 ? ` · <b>${h.n}곳 보도</b>` : ""}${h.summary ? "<br>" + esc(h.summary) : ""}</small></span></a></li>`).join("\n");
-  return `${head(`${cat.name} 헤드라인 ${day.date}`)}${appbar(home, `${cat.name} 헤드라인`, `${root}archive/`, "지난 호", "☰")}
+  return `${head(`${cat.name} 헤드라인 ${dotDate(day.date)}`, day.headlines.slice(0, 3).map(h => h.title).join(" · "), path)}${appbar(home, `${cat.name} 헤드라인`, `${root}archive/`, "지난 호", "☰")}
 <main class="wrap"><section class="top">
   <span class="eyebrow">${dotDate(day.date)} · ${day.headlines.length} headlines</span>
   <h1>${esc(cat.name)} <em>headlines</em></h1>
@@ -37,16 +44,17 @@ ${list}
 }
 
 fs.rmSync("dist", { recursive: true, force: true });
+fs.cpSync("public", "dist", { recursive: true }); // 아이콘·공유 이미지·매니페스트
 const write = (p, s) => { fs.mkdirSync(`dist/${p}`, { recursive: true }); fs.writeFileSync(`dist/${p}index.html`, s); };
 
 for (const cat of CATS) {
   const days = cat.days = loadDays(cat.id);
   if (!days.length) continue;
   const p = `${cat.id}/`;
-  write(p, renderDay(days[0], cat, "", "../"));
-  for (const d of days) write(`${p}${d.date}/`, renderDay(d, cat, "../", "../../"));
+  write(p, renderDay(days[0], cat, "", p));
+  for (const d of days) write(`${p}${d.date}/`, renderDay(d, cat, "../", `${p}${d.date}/`));
   const list = days.map(d => `<li><a href="../${d.date}/"><span class="n">${d.headlines.length}</span><span class="t">${dotDate(d.date)} · ${esc(d.headlines[0].title)}</span></a></li>`).join("\n");
-  write(`${p}archive/`, `${head(`${cat.name} 지난 호`)}${appbar("../../", `${cat.name} 헤드라인`, "../", "최신 호", "↗")}
+  write(`${p}archive/`, `${head(`${cat.name} 지난 호`, `${cat.name} 헤드라인 ${days.length}개 호 모음`, `${p}archive/`)}${appbar("../../", `${cat.name} 헤드라인`, "../", "최신 호", "↗")}
 <main class="wrap"><section class="top">
   <span class="eyebrow">Archive · ${days.length} issues</span>
   <h1>지난 <em>issues</em></h1>
@@ -72,7 +80,8 @@ const crate = (c, i) => `<button class="crate" style="--c:var(--${c.color})" ari
   <span class="sleeve"><span class="meta"><span>No. ${String(i + 1).padStart(2, "0")}</span><span>${c.items.length ? `${c.items.length}건` : "SOON"}</span></span><span class="hole" aria-hidden="true"></span><b class="name">${esc(c.name)}</b></span>
 </button>`;
 write("", fs.readFileSync("hub.html", "utf8")
-  .replace("{{HEAD}}", () => head("뉴스 모아보기"))
+  .replace("{{HEAD}}", () => head("뉴스 모아보기", `${hubData.find(c => c.date)?.date ?? ""} 오늘의 ${CATS.map(c => c.name).join("·")} 헤드라인`, ""))
+  .replace("{{UPDATED}}", () => CATS.flatMap(c => c.days[0]?.collected ?? []).sort().at(-1) ?? "")
   .replace("{{CRATES}}", () => hubData.map(crate).join(""))
   .replace("{{DATA}}", () => JSON.stringify(hubData).replace(/</g, "\\u003c")));
 
