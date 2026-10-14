@@ -6,6 +6,7 @@ import fs from "node:fs";
 const GN = q => `https://news.google.com/rss/search?q=${encodeURIComponent(q)}&hl=ko&gl=KR&ceid=KR:ko`;
 const AI_KW = /(?<![A-Za-z])AI(?![A-Za-z])|인공지능|GPT|LLM|챗봇|오픈AI|앤트로픽|제미나이|딥러닝|생성형/i;
 const STOCK_KW = /증시|코스피|코스닥|주가|종목|상장|공모|증권|외국인|기관|ETF|나스닥/;
+const US_KW = /뉴욕|미국|美|나스닥|S&P|다우|월가|연준|파월|엔비디아|테슬라|애플|마이크로소프트|빅테크|아마존|메타|알파벳/;
 const FEEDS = {
   ai: [
     ["AI타임스", "http://www.aitimes.com/rss/allArticle.xml"],
@@ -31,6 +32,13 @@ const FEEDS = {
     ["머니투데이", "https://rss.mt.co.kr/mt_news.xml", STOCK_KW],
     ["조선비즈", "https://biz.chosun.com/arc/outboundfeeds/rss/?outputType=xml", STOCK_KW],
     ["구글 뉴스", GN("증시 OR 코스피 OR 코스닥 when:1d")],
+  ],
+  global: [
+    ["한국경제", "https://www.hankyung.com/feed/finance", US_KW],
+    ["한국경제", "https://www.hankyung.com/feed/international", US_KW],
+    ["연합뉴스", "https://www.yna.co.kr/rss/market.xml", US_KW],
+    ["연합뉴스", "https://www.yna.co.kr/rss/international.xml", US_KW],
+    ["구글 뉴스", GN("뉴욕증시 OR 나스닥 OR 미국증시 when:1d")],
   ],
 };
 const MAX = 12, HOURS = 24;
@@ -66,7 +74,7 @@ async function fetchFeed([source, url, kw]) {
 // 채널 수를 먼저 보는 이유: 구글 뉴스 한 채널 안의 군소 지역지 수십 곳이 순위를 뒤집지 않게
 // 제목을 두 글자씩 쪼개(바이그램) 겹치는 비율이 SAME 이상이면 같은 소식, 이미 뽑은 것과 NEAR 이상이면 비슷한 소식이라 건너뜀
 // ponytail: 전체 쌍 비교 O(n²), 탭당 수백 건이라 1초 안. 수천 건이 되면 키워드 색인으로 후보를 줄일 것
-const SAME = 0.45, NEAR = 0.3, SKIP = /^\[(인사|게시판|부고|포토|사진|날씨|운세)\]/;
+const SAME = 0.45, NEAR = 0.25, SKIP = /^\[(인사|게시판|부고|포토|사진|날씨|운세)\]/;
 const bigrams = t => {
   const s = t.replace(/\[[^\]]*\]|\([^)]*\)/g, "").replace(/[^\p{L}\p{N}]/gu, "");
   const b = new Set();

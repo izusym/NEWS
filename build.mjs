@@ -6,6 +6,7 @@ const CATS = [
   { id: "ai", name: "AI", color: "amber", link: ["AI 트렌드", "https://litt.ly/ai.trend.kr"] },
   { id: "economy", name: "경제", color: "rose" },
   { id: "stock", name: "증시", color: "sage" },
+  { id: "global", name: "해외증시", color: "slate" },
 ];
 
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#x27;" })[c]);
