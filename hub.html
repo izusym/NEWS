@@ -47,7 +47,7 @@ body{position:relative;overflow-x:hidden;padding-bottom:150px}
 .bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
 .wheel{list-style:none;margin:6px 0 0;padding:calc(27vh - 36px) 16px;height:54vh;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none;-webkit-mask:linear-gradient(transparent,#000 24%,#000 76%,transparent);mask:linear-gradient(transparent,#000 24%,#000 76%,transparent)}
 .wheel::-webkit-scrollbar{display:none}
-.wheel li{height:72px;scroll-snap-align:center;transform-origin:left center;will-change:transform}
+.wheel li{height:72px;scroll-snap-align:center;transform-origin:center;will-change:transform}
 .row{--c:var(--news);display:flex;align-items:center;gap:14px;height:64px;padding:6px 8px 6px 6px;border-radius:999px;text-decoration:none;transition:background-color .3s,box-shadow .3s}
 .row.video{--c:var(--video)} .row.tips{--c:var(--tips)} .row.trend{--c:var(--trend)}
 .art{--c:var(--news);flex:none;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font:italic 400 20px var(--serif);color:#141414;
@@ -138,7 +138,7 @@ function paintCrates() {
 function paintWheel() {
   const i = measure(wheel, 72, false, (el, d) => {
     const a = Math.abs(d);
-    el.style.transform = `translateX(${a * a * 11}px) rotate(${d * 7}deg) scale(${Math.max(0.78, 1 - a * 0.07)})`;
+    el.style.transform = `scale(${Math.max(0.9, 1 - a * 0.04)})`;
     el.style.opacity = Math.max(0.12, 1 - a * 0.3);
   });
   [...wheel.children].forEach((li, j) => li.classList.toggle("on", j === i));
