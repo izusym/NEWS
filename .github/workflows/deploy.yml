@@ -1,5 +1,5 @@
 # data/**/*.json 커밋 → 빌드 → GitHub Pages 배포
-# 매일 06:00 KST(21:00 UTC)에는 경제·증시 RSS 헤드라인을 먼저 모아 커밋 (Claude 사용 안 함)
+# 매일 06:00 KST(21:00 UTC)에는 AI·경제·증시 RSS 헤드라인을 먼저 모아 커밋 (Claude 사용 안 함)
 name: deploy
 on:
   push:

@@ -1,7 +1,9 @@
 // node rss.mjs → data/<카테고리>/YYYY-MM-DD.json (언론사 RSS 헤드라인, Claude 사용 안 함)
 import fs from "node:fs";
 
+// AI타임스는 HTTPS 인증서 체인이 불완전해 Node fetch가 거부 → HTTP로 받음 (제목·링크만 쓰는 공개 RSS)
 const FEEDS = {
+  ai: [["AI타임스", "http://www.aitimes.com/rss/allArticle.xml"], ["인공지능신문", "https://www.aitimes.kr/rss/allArticle.xml"]],
   economy: [["한국경제", "https://www.hankyung.com/feed/economy"], ["연합뉴스", "https://www.yna.co.kr/rss/economy.xml"]],
   stock: [["한국경제", "https://www.hankyung.com/feed/finance"], ["연합뉴스", "https://www.yna.co.kr/rss/market.xml"]],
 };
@@ -12,7 +14,8 @@ const decode = s => s.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1").replace(/<[^>
   .replace(/\s+/g, " ").trim();
 const tag = (xml, t) => decode(xml.match(new RegExp(`<${t}[^>]*>([\\s\\S]*?)</${t}>`))?.[1] ?? "");
 
-const toIso = s => { const t = Date.parse(s); return isNaN(t) ? "" : new Date(t).toISOString(); };
+// 시간대 없는 "2026-10-14 18:23:32"(AI타임스 등)는 한국 시간으로 해석
+const toIso = s => { const t = Date.parse(/^\d{4}-\d\d-\d\d \d\d:\d\d/.test(s) ? s.replace(" ", "T") + "+09:00" : s); return isNaN(t) ? "" : new Date(t).toISOString(); };
 
 // ponytail: 정규식 RSS 파서, 쓰는 피드(한경·연합)가 RSS 2.0 형식이라 충분. 다른 형식 피드를 넣으면 파서 라이브러리 고려
 function parse(xml, source) {
