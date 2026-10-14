@@ -3,7 +3,7 @@ import fs from "node:fs";
 
 // 카테고리: data/<id>/YYYY-MM-DD.json(rss.mjs가 생성)이 있으면 활성, 없으면 "준비 중" 슬리브
 const CATS = [
-  { id: "ai", name: "AI", color: "amber" },
+  { id: "ai", name: "AI", color: "amber", link: ["AI 트렌드", "https://litt.ly/ai.trend.kr"] },
   { id: "economy", name: "경제", color: "rose" },
   { id: "stock", name: "증시", color: "sage" },
 ];
@@ -61,7 +61,7 @@ const hubData = CATS.map(c => {
   const d = c.days[0];
   const srcs = d ? [...new Set(d.headlines.map(h => h.source))] : [];
   return {
-    id: c.id, name: c.name, color: c.color, date: d ? dotDate(d.date) : "",
+    id: c.id, name: c.name, color: c.color, date: d ? dotDate(d.date) : "", link: c.link,
     verdict: d ? d.headlines[0].title : "준비 중이에요. 곧 소식을 모아 올게요.",
     items: !d ? [] : d.headlines.map(h => ({ t: h.title, tag: `${h.source} · ${hhmm(h.pub)}${h.n > 1 ? ` · ${h.n}곳 보도` : ""}`, c: SRC_COLOR[srcs.indexOf(h.source) % 4], href: safeUrl(h.link), ext: true })),
   };

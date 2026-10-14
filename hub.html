@@ -31,6 +31,12 @@ body{position:relative;overflow-x:hidden;padding-bottom:150px}
 .caption .v{font:500 16px/1.55 var(--body);letter-spacing:-.02em;text-wrap:balance}
 .caption .s{font:500 11px var(--mono);letter-spacing:.04em;color:var(--muted);margin-top:8px}
 .caption .s b{color:var(--g,var(--amber));font-weight:500}
+/* 카테고리별 바로가기 버튼 (예: AI → AI 트렌드) */
+.extra{display:flex;justify-content:center;margin-top:14px}
+.extra[hidden]{display:none}
+.extra a{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:color-mix(in srgb,var(--g,var(--amber)) 16%,transparent);border:1px solid color-mix(in srgb,var(--g,var(--amber)) 45%,transparent);color:var(--fg);font:600 14px var(--body);text-decoration:none;transition:transform .2s,background-color .3s}
+.extra a:hover{transform:translateY(-2px)}
+.extra a span{color:var(--g,var(--amber))}
 
 /* 하단: 오늘의 1위 미니 바 + 탭 바 (앱처럼 화면 아래 고정) */
 .dock{position:fixed;bottom:0;left:50%;translate:-50% 0;width:min(100%,440px);z-index:4;padding:0 12px max(10px,env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--bg) 30%)}
@@ -66,7 +72,7 @@ li.on .go{opacity:1;transform:none}
 <main class="view" id="hub">
   <div class="pad"><span class="eyebrow" id="today"></span><h1>오늘의 뉴스</h1><p class="lead">Dig through the <em>headlines.</em></p></div>
   <div class="crates" aria-label="뉴스 카테고리 (좌우로 넘기기)">{{CRATES}}</div>
-  <div class="caption" aria-live="polite"><p class="v"></p><p class="s"></p></div>
+  <div class="caption" aria-live="polite"><p class="v"></p><p class="s"></p><p class="extra" hidden><a target="_blank" rel="noopener noreferrer"></a></p></div>
 </main>
 
 <section class="view" id="detail" hidden aria-labelledby="dt">
@@ -131,6 +137,9 @@ function paintCrates() {
   setTimeout(() => {
     cap.querySelector(".v").textContent = c.verdict;
     cap.querySelector(".s").innerHTML = c.items.length ? `<b>${c.items.length} STORIES</b> · ${c.date} · TAP TO OPEN` : "COMING SOON";
+    const ex = cap.querySelector(".extra");
+    ex.hidden = !c.link;
+    if (c.link) { ex.firstChild.href = c.link[1]; ex.firstChild.innerHTML = `${esc(c.link[0])} <span>↗</span>`; }
     cap.classList.remove("fade");
   }, still ? 0 : 180);
 }
