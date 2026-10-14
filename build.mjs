@@ -58,14 +58,30 @@ function renderDay(day, tpl, root, home) {
     .replace("{{TOP3}}", () => top3).replace("{{CARDS}}", () => cardHtml);
 }
 
-// 카테고리: data/<id>/YYYY-MM-DD.json 이 있으면 활성, 없으면 "준비 중" 탭
-// ponytail: 다른 카테고리도 지금은 AI 카드뉴스와 같은 JSON 형식을 가정
+// 카테고리: data/<id>/YYYY-MM-DD.json 이 있으면 활성, 없으면 "준비 중" 슬리브
+// JSON 두 종류: cards(AI 카드뉴스, Claude 루틴) / headlines(언론사 RSS, rss.mjs)
 const CATS = [
   { id: "ai", name: "AI", color: "amber" },
   { id: "economy", name: "경제", color: "rose" },
-  { id: "tech", name: "IT·과학", color: "sage" },
-  { id: "world", name: "세계", color: "slate" },
+  { id: "stock", name: "증시", color: "sage" },
 ];
+const count = d => (d.cards ?? d.headlines).length;
+const hhmm = iso => iso ? new Date(Date.parse(iso) + 9 * 3600e3).toISOString().slice(11, 16) : "";
+
+function renderHeadlines(day, cat, home, latest) {
+  const list = day.headlines.map((h, i) => `<li><a href="${esc(safeUrl(h.link))}" target="_blank" rel="noopener noreferrer"><span class="n">${i + 1}</span><span class="t">${esc(h.title)}<small class="hs">${esc(h.source)}${h.pub ? " · " + hhmm(h.pub) : ""}${h.summary ? "<br>" + esc(h.summary) : ""}</small></span></a></li>`).join("\n");
+  return `${head(`${cat.name} 헤드라인 ${day.date}`)}<style>.hs{display:block;font-weight:400;font-size:12px;color:var(--muted);margin-top:3px}.t3 ol{gap:16px}</style>
+<header class="appbar"><a class="ic" href="${home}" aria-label="메인으로">‹</a><b>${esc(cat.name)} 헤드라인</b><a class="ic" href="${latest}archive/" aria-label="지난 호" title="지난 호">☰</a></header>
+<main class="wrap"><section class="top">
+  <span class="eyebrow">${dotDate(day.date)} · ${day.headlines.length} headlines</span>
+  <h1>${esc(cat.name)} <em>headlines</em></h1>
+  <nav class="t3" aria-label="헤드라인"><h2>최근 24시간 · 최신순 · 언론사 RSS</h2><ol>
+${list}
+  </ol></nav>
+  <p class="note">수집 ${esc(day.collected ?? day.date)} (KST). 제목을 누르면 언론사 기사로 이동합니다. 투자 판단의 근거로 쓰기 전에 원문을 확인하세요.</p>
+</section></main>`;
+}
+const renderAny = (d, cat, root, home) => d.cards ? renderDay(d, tpl, root, home) : renderHeadlines(d, cat, home, root);
 
 const tpl = fs.readFileSync("template.html", "utf8");
 const head = title => tpl.slice(0, tpl.indexOf("<header")).replace("{{TITLE}}", title);
@@ -80,9 +96,9 @@ for (const cat of CATS) {
   const days = cat.days = loadDays(cat.id);
   if (!days.length) continue;
   const p = `${cat.id}/`;
-  write(p, renderDay(days[0], tpl, "", "../"));
-  for (const d of days) write(`${p}${d.date}/`, renderDay(d, tpl, "../", "../../"));
-  const list = days.map(d => `<li><a href="../${d.date}/"><span class="n">${d.cards.length}</span><span class="t">${dotDate(d.date)} · ${esc(d.verdict)}</span></a></li>`).join("\n");
+  write(p, renderAny(days[0], cat, "", "../"));
+  for (const d of days) write(`${p}${d.date}/`, renderAny(d, cat, "../", "../../"));
+  const list = days.map(d => `<li><a href="../${d.date}/"><span class="n">${count(d)}</span><span class="t">${dotDate(d.date)} · ${esc(d.verdict)}</span></a></li>`).join("\n");
   write(`${p}archive/`, `${head(`${cat.name} 뉴스 지난 호`)}<header class="appbar"><a class="ic" href="../../" aria-label="메인으로">‹</a><b>${esc(cat.name)} 뉴스</b><a class="ic" href="../" aria-label="최신 호" title="최신 호">↗</a></header>
 <main class="wrap"><section class="top">
   <span class="eyebrow">Archive · ${days.length} issues</span>
@@ -99,7 +115,8 @@ const hubData = CATS.map(c => {
   return {
     id: c.id, name: c.name, color: c.color, date: d ? dotDate(d.date) : "",
     verdict: d?.verdict ?? "준비 중이에요. 곧 소식을 모아 올게요.",
-    items: d ? d.cards.map((x, i) => ({ t: x.title, tag: x.tag, c: TAGC[x.tag] ?? "news", href: `${c.id}/#c${i + 1}` })) : [],
+    items: !d ? [] : d.cards ? d.cards.map((x, i) => ({ t: x.title, tag: x.tag, c: TAGC[x.tag] ?? "news", href: `${c.id}/#c${i + 1}` }))
+      : d.headlines.map(h => ({ t: h.title, tag: `${h.source} · ${hhmm(h.pub)}`, c: h.source === "연합뉴스" ? "trend" : "video", href: safeUrl(h.link), ext: true })),
   };
 });
 const crate = (c, i) => `<button class="crate" style="--c:var(--${c.color})" aria-label="${esc(c.name)} 뉴스${c.items.length ? ` ${c.items.length}건` : " (준비 중)"}">

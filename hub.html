@@ -165,7 +165,7 @@ function open(i) {
     $("#dt").textContent = `${c.name} 뉴스`;
     $("#dm").textContent = `${c.date} · ${c.items.length} stories`;
     $("#full").href = `${c.id}/`;
-    wheel.innerHTML = c.items.map((x, j) => `<li><a class="row ${x.c}" href="${x.href}"><span class="art ${x.c}">${j + 1}</span><span class="txt"><small>${esc(x.tag)}</small><b>${esc(x.t)}</b></span><span class="go">읽기</span></a></li>`).join("");
+    wheel.innerHTML = c.items.map((x, j) => `<li><a class="row ${x.c}" href="${esc(x.href)}"${x.ext ? ' target="_blank" rel="noopener noreferrer"' : ""}><span class="art ${x.c}">${j + 1}</span><span class="txt"><small>${esc(x.tag)}</small><b>${esc(x.t)}</b></span><span class="go">읽기</span></a></li>`).join("");
     wheel.scrollTop = 0;
     paintWheel();
     scrollTo(0, 0);
