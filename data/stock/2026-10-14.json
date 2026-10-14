@@ -1,146 +1,102 @@
 {
  "date": "2026-10-14",
- "collected": "2026-10-14 22:45",
+ "collected": "2026-10-14 22:52",
  "headlines": [
   {
-   "title": "\"더 물타기 할 돈도 없다\"…개미 실탄 고갈에 6천피 붕괴 '초읽기' [분석+]",
-   "link": "https://www.hankyung.com/article/2026101418086",
-   "source": "한국경제",
-   "pub": "2026-10-14T13:00:02.000Z",
-   "summary": ""
+   "title": "약보합 코스피 6,000선 사수",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9zZVZDdzAxNlgtbU95YjI3N1VxYWNlWl9SbFIyOVBIa01UbVZadkRHamVCSTEtcTNoRzlra0tjTldubzdQZVF6aVJnZFlXb0hVVlRHSkpBeHdHT2JxNnNDRDlSTlIwQ1ZlMFdPYw?oc=5",
+   "source": "KB Think",
+   "pub": "2026-10-14T07:02:58.000Z",
+   "summary": "",
+   "n": 24
   },
   {
-   "title": "“증시 부양 동원됐나” “당시 국장 낙관”…국민연금 ‘리밸런싱 유예’ 국감 공방",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBzb1FJLUdoS2ppSlVQM0tmWjFHWDg5aDAxaVhCTlFMZnN3X3B1cDBaRXRuOGQtZVhTSlRXYlJpZWdnZUFKVXdDejR4dHdZUzI1bzU3bnBSZ0pkZ9IBX0FVX3lxTFBPN2wtZ0tmWGpmV0xPSmR2b3hQaExEdGVLOE0xSlJSb052b1pUWjJJN1JiRHZRVGVmOFlqTWtyeUktcjhoWnNVRGs5dEdFMi1ZR3F2SDEyNTdpcmJfOXlj?oc=5",
-   "source": "경향신문",
-   "pub": "2026-10-14T12:46:00.000Z",
-   "summary": ""
+   "title": "코스피 6거래일 연속 내려...'6천 선' 턱걸이",
+   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9WOE1ZQkh4ZnN2QlNFZGFVWVpPZ0pmS1QxVy1Ga2JIcFVDalpsNVJ1YWJ4YUQ4SG1fcWotRDhkVHpmS0xEa0NqWGpHbTU0OENLd29sUlVjcVVsc3ZCNVE?oc=5",
+   "source": "YTN",
+   "pub": "2026-10-14T10:23:00.000Z",
+   "summary": "",
+   "n": 13
   },
   {
-   "title": "\"빚내서 SK하닉 샀는데\"…두 달 만에 '600억' 결국 멘붕",
-   "link": "https://www.hankyung.com/article/2026101425447",
-   "source": "한국경제",
-   "pub": "2026-10-14T12:30:40.000Z",
-   "summary": ""
-  },
-  {
-   "title": "증시 '검은 화요일'에 600억 반대매매 '비명'…두 달여 만에 최대",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9WUjFtM2lFNUJyTTlvZWtZMGZfV2F5Q1ZrRnBmbjVzVno2azhiYUgzVXo1WVhQTDdQNFVnYnBYMzBfMmtLWG1HRXJTRkJxdkpIZk5CeG5yVmdadw?oc=5",
-   "source": "한국경제",
-   "pub": "2026-10-14T12:30:40.000Z",
-   "summary": ""
-  },
-  {
-   "title": "뉴욕증시 개장 전 특징주...블랙록·게임스탑·앨버말↑ VS ASML·델·휴렛팩커드↓",
-   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9iQ1pqUHJrMTVlVVRIM0xKY1I0Z3RBQVNRUHlTTzljU3JGUFVrNzUzUHFFbnRTa0t0N2hfOTVEWjVjdVNPS1ktbkRZYjNLcTRpMC1NSnVyN003Ry1i?oc=5",
-   "source": "뉴스핌",
-   "pub": "2026-10-14T12:23:00.000Z",
-   "summary": ""
-  },
-  {
-   "title": "뉴욕증시 프리뷰, 미 주가선물 혼조...물가 발표 앞두고 관망 속 AI주 반등",
-   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA0MDRENDdGUlZEMGlTcnQ5MVB4SF9KMEdLd1UwNjhfUmczLTB4ZmJSUGdEMkR2dmpjN1lnNUNsVTd5VlpnZkVqYkFITUVfY056RHNzRVFfd1J0Mndp?oc=5",
-   "source": "뉴스핌",
-   "pub": "2026-10-14T12:07:00.000Z",
-   "summary": ""
-  },
-  {
-   "title": "코스피, 반등 실패…6,000선 간신히 사수",
-   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1XY09TeTdLSi1sbHIyLWw4dTk3aXVkS3o3LWljdWxZdTJpUjlVbmwtWEYzYUF5TGFRRk9kdHM5S09XRUhRRVpabDFtX3pFRXFLM2o2c0tTMW5QVVV2dUpsVUlDYVAxQ2s?oc=5",
+   "title": "국민연금 \"리밸런싱 유예 안했다면 증시에 충격\"",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1va3c1RHg5ajNndVdVazJ4MWFRclBmTVdiSkpZN2V2NFlpRGNEQ1M5QV9idUNNakxaa2llSXJ1Rk1neWcyYlZ5eVQ2R0w4QWhzQTRwVm1XS0ZZTEI1UnI0OGw0bTVhMVk?oc=5",
    "source": "연합뉴스TV",
-   "pub": "2026-10-14T11:53:00.000Z",
-   "summary": ""
+   "pub": "2026-10-14T09:29:00.000Z",
+   "summary": "",
+   "n": 3
   },
   {
-   "title": "증시 흔든 창신메모리의 경고…‘반도체 쏠림’ 경제 부담으로",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5GY29OYlVUVlEyNnRoN2FUdEJZOXVSem1HZDFCZFVaWldOY2hITzJQZVdwNzVGNzBDODBTQ2ZPWTd2bjlvQjlmRlFsRTNta1BqYl9HRnF0QkFkd9IBX0FVX3lxTE1rNXh3QmF3ZXd5ZGgxbUVVZGN6ZEFHUkhielF5cVhNRlVsc0JUYW1rbEVuTF83NHdzUlpITFJ1UzRLdmtYRlJJWW90TDFrOTV2QWExWFZkbnd6dVZOS1Z3?oc=5",
-   "source": "경향신문",
-   "pub": "2026-10-14T11:45:00.000Z",
-   "summary": ""
+   "title": "코스피 반등 무산…ASML 실적에 ’출렁’",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBqdWpXaUFFQW8yQ1dTT3BlTldiOUhLelRxSW16YW1uZm5uV0tXQUZfSVFCcXdPOUtwazhUbkVZLWdBWGRGVlNScEY5OE80aWptU1hoTVE4OVNqQmtGTDI4UWJtSVVJQzQ?oc=5",
+   "source": "연합뉴스TV",
+   "pub": "2026-10-14T09:15:00.000Z",
+   "summary": "",
+   "n": 3
   },
   {
-   "title": "제이알글로벌리츠, 자율구조조정 협의기간 내달 13일까지 연장",
-   "link": "https://www.yna.co.kr/view/AKR20261014180000008",
+   "title": "코스피 급락한 '검은 화요일', 반대매매 두달여만에 최대로 증가",
+   "link": "https://www.yna.co.kr/view/AKR20261014144200008",
    "source": "연합뉴스",
-   "pub": "2026-10-14T10:41:35.000Z",
-   "summary": "(서울=연합뉴스) 정회인 기자 = 제이알글로벌리츠[348950]는 서울회생법원이 자율구조조정프로그램(ARS) 협의 기간을 다음 달 13일까지 한..."
+   "pub": "2026-10-14T06:58:48.000Z",
+   "summary": "(서울=연합뉴스) 고은지 기자 = 코스피가 장중 5천선으로 내려앉았던 지난 13일 반대매매 금액이 지난 7월 말 이후 두 달여 만에 최대로 늘어...",
+   "n": 3
   },
   {
-   "title": "[종목상담 주식민원처리반] 전장용 제품 수요 확대 따른 실적 기대 '삼화전기'",
-   "link": "https://www.mt.co.kr/stock/2026/10/14/2026101418527032556",
-   "source": "머니투데이",
-   "pub": "2026-10-14T10:36:13.000Z",
-   "summary": "▶ 진행 - 신유정 앵커 ▶ 출연 - 박진섭 MTNW 어드바이저 ▶▶▶ 박진섭의 황금선 투자 ▶ 황금선 급등 종목 BEST5 이수스페셜티케미컬 > 전고체용 황화리튬 양산 기대 롯데에너지머티리얼즈 >"
-  },
-  {
-   "title": "당국 \"금융사 침해사고 발생 총 16곳…약 10만건 유출\"(종합2보)",
-   "link": "https://www.yna.co.kr/view/AKR20261014134852002",
+   "title": "[코스피] 26.54p(0.44%) 내린 6,008.81(장종료)",
+   "link": "https://www.yna.co.kr/view/AKR20261014136300008",
    "source": "연합뉴스",
-   "pub": "2026-10-14T10:23:59.000Z",
-   "summary": "(서울=연합뉴스) 배영경 강수련 김지연 강류나 기자 = 금융당국은 최근 인공지능(AI) 해킹 침해가 확인된 금융회사가 전체 업권을 통틀어 현재까..."
+   "pub": "2026-10-14T06:30:57.000Z",
+   "summary": "(",
+   "n": 3
   },
   {
-   "title": "유한양행 '렉라자' 병용 요법 매출 첫 3억달러 돌파",
-   "link": "https://www.yna.co.kr/view/AKR20261014175000017",
+   "title": "'월가 족집게' 댄 아이브스 \"코스피 6∼12개월 내 전고점 돌파\"(종합)",
+   "link": "https://www.yna.co.kr/view/AKR20261014080551008",
    "source": "연합뉴스",
-   "pub": "2026-10-14T10:19:41.000Z",
-   "summary": "(서울=연합뉴스) 박상현 기자 = 유한양행[000100]이 개발한 비소세포폐암 치료제 '렉라자'(성분명 레이저티닙)의 판매 확대가 이어지고 있다..."
+   "pub": "2026-10-14T06:17:03.000Z",
+   "summary": "(서울=연합뉴스) 정회인 기자 = 월가의 대표적인 기술주 분석가인 댄 아이브스 '요크빌 아이브스' 파트너 겸 선임 전무는 엔비디아와 마이크로소프...",
+   "n": 3
   },
   {
-   "title": "최장 16년 '초장기기술투자펀드' 운용사 7곳 선정…연말가동",
-   "link": "https://www.yna.co.kr/view/AKR20261014172900002",
-   "source": "연합뉴스",
-   "pub": "2026-10-14T09:49:39.000Z",
-   "summary": "(서울=연합뉴스) 강류나 기자 = 금융위원회는 장기 투자가 필요한 첨단기술 기업에 최장 16년간 투자하는 '초장기기술투자펀드'의 위탁운용사 7곳..."
+   "title": "코스피, 0.44% 오른 6,062.08 출발…코스닥은 0.14%↓",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1yZC1YdXdiQkVUTGhQcUNqZ1NDQzlVZ3c1cDI3c3EwcWJpTFBUaFU4ejd4N0hWWjlZbGtFRS1PN0Fzb2YyVmxRZmtaY25UU1E4SU5lYUZpZlhYVTZFTlY3Yjd4QjI5c2s?oc=5",
+   "source": "연합뉴스TV",
+   "pub": "2026-10-14T00:04:00.000Z",
+   "summary": "",
+   "n": 3
   },
   {
-   "title": "올해 200조 넘게 판 외국인…브라질로 갔다",
-   "link": "https://www.hankyung.com/article/2026101422211",
+   "title": "'승자의 저주' 걱정에…롯데손보 삼킨 신한지주 급락",
+   "link": "https://www.hankyung.com/article/202610141870i",
    "source": "한국경제",
-   "pub": "2026-10-14T09:02:29.000Z",
-   "summary": ""
+   "pub": "2026-10-14T07:29:45.000Z",
+   "summary": "",
+   "n": 2
   },
   {
-   "title": "롯데에너지머티리얼즈, 그룹 시총 1위 올랐다",
-   "link": "https://www.hankyung.com/article/2026101421531",
+   "title": "ASML \"2028년까지 공급 부족…추가 증설 검토\"",
+   "link": "https://www.hankyung.com/article/2026101418197",
    "source": "한국경제",
-   "pub": "2026-10-14T08:48:02.000Z",
-   "summary": ""
+   "pub": "2026-10-14T07:03:51.000Z",
+   "summary": "",
+   "n": 2
   },
   {
-   "title": "美 은행주 약세…고금리發 채권거래 감소 직격탄",
-   "link": "https://www.hankyung.com/article/2026101421521",
+   "title": "삼전닉스, 급락 딛고 반등…삼성전자 3%·하이닉스 2%대 상승",
+   "link": "https://www.hankyung.com/article/2026101407036",
    "source": "한국경제",
-   "pub": "2026-10-14T08:46:08.000Z",
-   "summary": ""
+   "pub": "2026-10-14T00:54:00.000Z",
+   "summary": "",
+   "n": 2
   },
   {
-   "title": "9천200억 위메이드 매각, 중국계 인수 12월로 연기",
-   "link": "https://www.yna.co.kr/view/AKR20261014165900017",
+   "title": "[특징주] 이차전지주, ESS 성장 기대에 강세…삼성SDI 3%대↑",
+   "link": "https://www.yna.co.kr/view/AKR20261014045600008",
    "source": "연합뉴스",
-   "pub": "2026-10-14T08:42:41.000Z",
-   "summary": "(서울=연합뉴스) 김주환 기자 = 중국계 컨소시엄으로 최대 주주 변경을 예고한 국내 게임사 위메이드[112040]의 경영권 이전이 두 달 연기됐..."
-  },
-  {
-   "title": "오늘의 프리미엄9 콘텐츠 다이제스트(10월 14일)",
-   "link": "https://www.hankyung.com/article/202610142137i",
-   "source": "한국경제",
-   "pub": "2026-10-14T08:37:27.000Z",
-   "summary": ""
-  },
-  {
-   "title": "\"17년 만에 상가 대할인 기회\" [한경 프리미엄9 TODAY]",
-   "link": "https://www.hankyung.com/article/2026101421711",
-   "source": "한국경제",
-   "pub": "2026-10-14T08:33:35.000Z",
-   "summary": ""
-  },
-  {
-   "title": "휴맥스, 50억원 유상증자…주식회사 제이투비에 제3자배정",
-   "link": "https://www.yna.co.kr/view/AKR20261014163100008",
-   "source": "연합뉴스",
-   "pub": "2026-10-14T08:30:59.000Z",
-   "summary": "(서울=연합뉴스) 코스닥 상장사 휴맥스[115160]는 운영자금 등 약 50억원을 조달하고자 제3자배정 유상증자를 결정했다고 14일 공시했다."
+   "pub": "2026-10-14T00:30:41.000Z",
+   "summary": "(서울=연합뉴스) 곽윤아 기자 = 최근 에너지저장장치(ESS) 수요 확대에 대한 기대가 커지는 가운데 14일 장 초반 삼성SDI[006400] ...",
+   "n": 2
   }
  ]
 }

@@ -4,7 +4,7 @@ import fs from "node:fs";
 // [이름, 주소, (선택) 제목 키워드 필터]. 구글 뉴스 검색 RSS는 여러 언론사 기사를 한 번에 줌(실제 언론사 이름은 <source>에서 읽음)
 // AI타임스는 HTTPS 인증서 체인이 불완전해 Node fetch가 거부 → HTTP로 받음 (제목·링크만 쓰는 공개 RSS)
 const GN = q => `https://news.google.com/rss/search?q=${encodeURIComponent(q)}&hl=ko&gl=KR&ceid=KR:ko`;
-const AI_KW = /AI|인공지능|GPT|LLM|챗봇|오픈AI|앤트로픽|제미나이|딥러닝|생성형/i;
+const AI_KW = /(?<![A-Za-z])AI(?![A-Za-z])|인공지능|GPT|LLM|챗봇|오픈AI|앤트로픽|제미나이|딥러닝|생성형/i;
 const STOCK_KW = /증시|코스피|코스닥|주가|종목|상장|공모|증권|외국인|기관|ETF|나스닥/;
 const FEEDS = {
   ai: [
@@ -12,7 +12,6 @@ const FEEDS = {
     ["인공지능신문", "https://www.aitimes.kr/rss/allArticle.xml"],
     ["전자신문", "https://rss.etnews.com/Section901.xml", AI_KW],
     ["ZDNet Korea", "https://zdnet.co.kr/feed", AI_KW],
-    ["구글 뉴스", GN("인공지능 OR 생성형AI when:1d")],
   ],
   economy: [
     ["한국경제", "https://www.hankyung.com/feed/economy"],
@@ -34,7 +33,7 @@ const FEEDS = {
     ["구글 뉴스", GN("증시 OR 코스피 OR 코스닥 when:1d")],
   ],
 };
-const MAX = 20, HOURS = 24;
+const MAX = 12, HOURS = 24;
 
 const decode = s => s.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1").replace(/<[^>]+>/g, "")
   .replace(/&(lt|gt|quot|apos|#39|nbsp|amp);/g, (_, e) => ({ lt: "<", gt: ">", quot: '"', apos: "'", "#39": "'", nbsp: " ", amp: "&" })[e])
@@ -63,14 +62,41 @@ async function fetchFeed([source, url, kw]) {
   } catch (e) { console.warn(`${source} ${url} 실패: ${e.message}`); return []; }
 }
 
-// 채널(피드)별로 최신순 정렬 후 한 건씩 번갈아 뽑아, 기사가 많은 한 채널이 목록을 독차지하지 않게 함
-function roundRobin(items) {
-  const by = new Map();
-  for (const x of items) by.set(x.feed, [...(by.get(x.feed) ?? []), x]);
-  const lists = [...by.values()].map(l => l.sort((a, b) => (Date.parse(b.pub) || 0) - (Date.parse(a.pub) || 0)));
-  const out = [];
-  for (let i = 0; lists.some(l => l[i]); i++) for (const l of lists) if (l[i]) out.push(l[i]);
+// 관심도 = 같은 소식을 다룬 채널 수 → 언론사 수 순 (RSS엔 조회수가 없어서 보도량으로 대신함)
+// 채널 수를 먼저 보는 이유: 구글 뉴스 한 채널 안의 군소 지역지 수십 곳이 순위를 뒤집지 않게
+// 제목을 두 글자씩 쪼개(바이그램) 겹치는 비율이 SAME 이상이면 같은 소식, 이미 뽑은 것과 NEAR 이상이면 비슷한 소식이라 건너뜀
+// ponytail: 전체 쌍 비교 O(n²), 탭당 수백 건이라 1초 안. 수천 건이 되면 키워드 색인으로 후보를 줄일 것
+const SAME = 0.45, NEAR = 0.3, SKIP = /^\[(인사|게시판|부고|포토|사진|날씨|운세)\]/;
+const bigrams = t => {
+  const s = t.replace(/\[[^\]]*\]|\([^)]*\)/g, "").replace(/[^\p{L}\p{N}]/gu, "");
+  const b = new Set();
+  for (let i = 0; i < s.length - 1; i++) b.add(s.slice(i, i + 2));
+  return b;
+};
+const overlap = (a, b) => { let n = 0; for (const x of a) if (b.has(x)) n++; return n / Math.min(a.size, b.size); };
+
+function rankByCoverage(items, max) {
+  const xs = items.filter(x => !SKIP.test(x.title)).map(x => ({ x, b: bigrams(x.title) })).filter(o => o.b.size >= 8);
+  const groups = xs.map(o => {
+    const same = xs.filter(p => overlap(o.b, p.b) >= SAME);
+    return { o, same, ch: new Set(same.map(p => p.x.feed)).size, n: new Set(same.map(p => p.x.source)).size };
+  }).sort((a, b) => b.ch - a.ch || b.n - a.n || (Date.parse(b.o.x.pub) || 0) - (Date.parse(a.o.x.pub) || 0));
+  const used = new Set(), picked = [], out = [];
+  for (const { o, same, n } of groups) {
+    if (used.has(o) || picked.some(b => overlap(o.b, b) >= NEAR)) continue;
+    same.forEach(p => used.add(p));
+    picked.push(o.b);
+    out.push({ ...o.x, n });
+    if (out.length >= max) break;
+  }
   return out;
+}
+
+// 자체 점검: 같은 소식 두 건은 하나로 묶여 2곳 보도, 다른 소식은 따로
+{
+  const t = (title, source) => ({ title, source, feed: source, pub: "" });
+  const r = rankByCoverage([t("금융사 침해사고 발생 총 16곳 약 10만건 유출", "A"), t("금융권 해킹 피해 총 16곳서 약 10만 건 유출", "B"), t("코스피 6거래일 연속 내려 6천선 턱걸이", "C")], 5);
+  if (r.length !== 2 || r[0].n !== 2 || r[1].n !== 1) throw new Error("rankByCoverage 점검 실패: " + JSON.stringify(r.map(x => x.n)));
 }
 
 const now = new Date(), kst = new Date(now.getTime() + 9 * 3600e3);
@@ -80,7 +106,7 @@ for (const [cat, feeds] of Object.entries(FEEDS)) {
   const fresh = (await Promise.all(feeds.map(fetchFeed))).flat()
     .filter(x => { const p = Date.parse(x.pub); return !p || now - p < HOURS * 3600e3; })
     .filter(x => { const k = x.title.replace(/[\s\p{P}\p{S}]/gu, "").slice(0, 20); return !seen.has(k) && seen.add(k); });
-  const items = roundRobin(fresh).slice(0, MAX).map(({ feed, ...x }) => x).sort((a, b) => (Date.parse(b.pub) || 0) - (Date.parse(a.pub) || 0));
+  const items = rankByCoverage(fresh, MAX).map(({ feed, ...x }) => x);
   if (!items.length) { console.warn(`${cat}: 헤드라인 없음, 건너뜀`); continue; }
   fs.mkdirSync(`data/${cat}`, { recursive: true });
   fs.writeFileSync(`data/${cat}/${date}.json`, JSON.stringify({ date, collected, headlines: items }, null, 1));
