@@ -1,0 +1,102 @@
+{
+ "date": "2026-10-17",
+ "collected": "2026-10-17 06:18",
+ "headlines": [
+  {
+   "title": "AI 시대 새로운 성장을 위한 네트워크 가치 재편",
+   "link": "https://zdnet.co.kr/view/?no=20261017001003",
+   "source": "ZDNet Korea",
+   "pub": "2026-10-16T15:10:03.000Z",
+   "summary": "[지디넷코리아]빈 2026년 10월 16일 /PRNewswire/ -- 세계광대역협회(World Broadband Association, WBBA)가 네트워크 X 2026(Network X 2026",
+   "n": 1
+  },
+  {
+   "title": "화웨이, AI 데이터센터 중심의 전광 네트워크용 차세대 OTN 제안",
+   "link": "https://zdnet.co.kr/view/?no=20261016201014",
+   "source": "ZDNet Korea",
+   "pub": "2026-10-16T11:10:14.000Z",
+   "summary": "[지디넷코리아]빈 2026년 10월 16일 /PRNewswire/ -- 화웨이(Huawei)가 네트워크X 2026(NetworkX 2026) 기간에 열린 광전송 혁신 서밋(Optical Transp",
+   "n": 1
+  },
+  {
+   "title": "코히어, AI 보안 스타트업 아일 인수 추진",
+   "link": "https://zdnet.co.kr/view/?no=20261016192557",
+   "source": "ZDNet Korea",
+   "pub": "2026-10-16T10:25:57.000Z",
+   "summary": "[지디넷코리아]캐나다 AI 기업 코히어가 AI로 소프트웨어 보안 취약점을 찾아 수정하는 스타트업 아일(AISLE) 인수를 추진한다. 아일은 현지 시각 10월 15일 공식 블로그에서 코히어와 인수 의",
+   "n": 1
+  },
+  {
+   "title": "타입세이프 AI, 의사결정 모델 '제브'에 멀티모달 등 기능 확장",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=216327",
+   "source": "AI타임스",
+   "pub": "2026-10-16T09:20:42.000Z",
+   "summary": "AI 의사결정 모델이 텍스트 분석을 넘어 이미지 속 정보를 해석하고 객체의 위치까지 찾아내는 방향으로 진화하고 있다. 타입세이프 AI는 개발자들이 새로운 기능을 자유롭게 실험할 수 있도록 기존 모델",
+   "n": 1
+  },
+  {
+   "title": "MS, 정식 출시 앞서 2.8조 매개변수 모델 공개…‘오픈AI 의존 줄일 독자 역량’ 부각",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=216337",
+   "source": "AI타임스",
+   "pub": "2026-10-16T09:08:58.000Z",
+   "summary": "마이크로소프트(MS)가 2조8000억개의 매개변수를 갖춘 대규모 AI 모델 'MAI-베이스-2(MAI-Base-2)'의 사전 학습 완료를 발표했다. 정식 출시 전 무스타파 술레이먼 MS AI CEO",
+   "n": 1
+  },
+  {
+   "title": "구글 창립자 “플래시부터 AI가 후속 모델 개발 참여…RSI 궤도 진입”",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=216350",
+   "source": "AI타임스",
+   "pub": "2026-10-16T09:00:00.000Z",
+   "summary": "세르게이 브린 구글 공동 창립자가 제미나이 모델이 후속 모델 개발을 돕는 비중이 커지고 있다며, 구글이 ‘재귀적 자기개선(RSI)’ 단계에 들어서기 시작했다고 밝혔다. 내부 개발 속도가 빨라져 새 ",
+   "n": 1
+  },
+  {
+   "title": "아마존, 일상 대화 기억·요약하는 개인용 AI 웨어러블 '비' 시리즈 공개",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=216332",
+   "source": "AI타임스",
+   "pub": "2026-10-16T08:49:55.000Z",
+   "summary": "아마존이 일상 대화를 기억하고 요약해 할 일과 일정까지 정리해 주는 개인용 AI 기기 2종을 공개했다. 손목에 착용하거나 옷에 부착하는 웨어러블 기기와 스마트폰 뒷면에 자석으로 붙이는 소형 기기로,",
+   "n": 1
+  },
+  {
+   "title": "TSMC, 머스크의 '테라팹' 협의 확인...\"운영권은 반드시 우리가 가져야\"",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=216330",
+   "source": "AI타임스",
+   "pub": "2026-10-16T08:41:02.000Z",
+   "summary": "TSMC가 일론 머스크 CEO의 텍사스 AI 반도체 생산 시설 '테라팹(Terafab)' 프로젝트 참여를 논의 중이라고 확인했다. 다만 협력 조건으로 공장 운영권은 TSMC가 가져야 한다는 입장을 ",
+   "n": 1
+  },
+  {
+   "title": "트웰브랩스, 말로 요청하면 장면 찾고 편집하는 AI 에이전트 ‘자키’ 출시",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=216341",
+   "source": "AI타임스",
+   "pub": "2026-10-16T08:19:55.000Z",
+   "summary": "트웰브랩스(대표 이재성)는 개발 지식이 없는 일반 사용자도 쉽게 영상을 편집할 수 있도록 돕는 영상 이해 AI 에이전트 '자키'를 출시했다고 16일 밝혔다.자키는 자체 파운데이션 모델에 임베딩과 메",
+   "n": 1
+  },
+  {
+   "title": "머스크, 메모리 반도체 가격 정책 강력 비판...삼성·SK하이닉스 겨냥",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=216348",
+   "source": "AI타임스",
+   "pub": "2026-10-16T08:15:49.000Z",
+   "summary": "일론 머스크 CEO가 메모리 반도체 공급 부족에 따른 제조업체들의 가격 정책을 강하게 비판했다. 특정 기업을 직접 거론하지는 않았지만, 미국 마이크론의 가격 정책을 칭찬하면서 삼성전자와 SK하이닉스",
+   "n": 1
+  },
+  {
+   "title": "오픈AI, 음성 모델 ‘GPT-라이브-1.1’ 공개...한국어 등 6개 언어 음성 개선",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=216339",
+   "source": "AI타임스",
+   "pub": "2026-10-16T08:02:19.000Z",
+   "summary": "오픈AI가 음성 모델 ‘GPT-라이브-1.1’을 공개하고 한국어를 포함한 6개 언어의 새로운 음성을 추가했다.오픈AI는 15일(현지시간) 챗GPT, 코덱스(Codex), 개인용 AI 에이전트 ‘닷츠",
+   "n": 1
+  },
+  {
+   "title": "AI에 권한 줬더니…방송 직전 프로그램 통째 증발 ‘날벼락",
+   "link": "https://zdnet.co.kr/view/?no=20261016150711",
+   "source": "ZDNet Korea",
+   "pub": "2026-10-16T07:51:26.000Z",
+   "summary": "[지디넷코리아]인공지능(AI) 에이전트에 서버 접근 권한을 부여했다가 TV 방송 프로그램 완성본이 통째로 증발하는 사고가 발생해 주목되고 있다.스웨덴 매체 아프톤블라데트 등 외신은 스웨덴의 대형 리",
+   "n": 1
+  }
+ ]
+}
