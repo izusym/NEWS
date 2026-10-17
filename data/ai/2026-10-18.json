@@ -1,0 +1,102 @@
+{
+ "date": "2026-10-18",
+ "collected": "2026-10-18 06:13",
+ "headlines": [
+  {
+   "title": "아트마켓의 아트프라이스: AI 시대 작가의 책임",
+   "link": "https://zdnet.co.kr/view/?no=20261018031003",
+   "source": "ZDNet Korea",
+   "pub": "2026-10-17T18:10:03.000Z",
+   "summary": "[지디넷코리아] '사상가와 AI의 대화(Dialogue Between a Thinker and AI)': 인간의 사고, 맡겨진 펜, 그리고 세계의 책(world-book)의 투명성. 2026년 9월",
+   "n": 1
+  },
+  {
+   "title": "신입 면접에 AI 고객 도입…“10분간 대화하는 능력 보고 뽑는다”",
+   "link": "https://www.etnews.com/20261015000418",
+   "source": "전자신문",
+   "pub": "2026-10-17T13:30:00.000Z",
+   "summary": "글로벌 경영 컨설팅 기업 맥킨지가 신입사원 선발 과정에 인공지능(AI)을 활용한 가상 고객 면담을 도입한다. 지원자는 AI로 구현된 고객과 약 10분간 대화를 주고받으며, 면접 평가자는 돌발 질문이",
+   "n": 1
+  },
+  {
+   "title": "[AI 모델 신작] BFL ‘플럭스 3 이미지 클라인’ 등 5종",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=216368",
+   "source": "AI타임스",
+   "pub": "2026-10-17T10:47:45.000Z",
+   "summary": "■ 블랙포레스트랩스, 이미지 생성·편집 모델 ‘플럭스 3 이미지 클라인’ 가중치 공개블랙포레스트랩스(BFL)가 56억개의 매개변수를 갖춘 이미지 생성·편집 모델 ‘플럭스 3 이미지 클라인(FLUX ",
+   "n": 1
+  },
+  {
+   "title": "AI 코딩도 LLM만으론 부족…레플릿, ‘결정론적 시뮬레이터’로 검증",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=216367",
+   "source": "AI타임스",
+   "pub": "2026-10-17T10:27:01.000Z",
+   "summary": "AI로 소프트웨어를 만드는 작업이 쉬워지면서, 결과물이 실제로 제대로 작동하는지 검증하는 문제가 부각되고 있다. AI 코딩 서비스 업체 레플릿도 외부 업체의 상용 테스트 플랫폼을 활용하는 것으로 알",
+   "n": 1
+  },
+  {
+   "title": "오픈AI 도청 사건에 드러난 AI 첩보전…기업들은 이미 ‘스파이 경계’",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=216366",
+   "source": "AI타임스",
+   "pub": "2026-10-17T09:45:28.000Z",
+   "summary": "오픈AI 직원의 회의실 도청 혐의 사건을 계기로 미국 AI 기업을 겨냥한 첩보 활동에 대한 우려가 커지고 있다. 미국 정보당국은 AI 기밀 보호를 국가 경쟁력과 안보의 문제로 강조했으며, 주요 AI",
+   "n": 1
+  },
+  {
+   "title": "GPT-6 아스트라, 미공개 물리 문제 98% 해결…전문가 오류도 발견",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=216365",
+   "source": "AI타임스",
+   "pub": "2026-10-17T09:06:23.000Z",
+   "summary": "오픈AI의 ‘GPT-6 아스트라’가 미공개 이론물리학 연구 문제 50개 중 49개를 사람의 힌트 없이 해결했다. 문헌을 찾아 계산식을 구성하고 코드를 실행하는 과정을 자율적으로 수행했으며, 채점 과",
+   "n": 1
+  },
+  {
+   "title": "전 오픈AI 연구원 “AI 내부 읽을 수 있다” 주장…기대·반론 엇갈려",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=216364",
+   "source": "AI타임스",
+   "pub": "2026-10-17T08:02:23.000Z",
+   "summary": "AI의 내부 작동을 이해하기 어렵게 만드는 근본적인 장벽이 생각보다 낮을 수 있다는 주장이 나와 논쟁이 일고 있다. 신경망에 서로 무관한 개념이 뒤섞여 있다는 기존 해석을 연구자 스스로 뒤집었기 때",
+   "n": 1
+  },
+  {
+   "title": "센스톤, 정부 피지컬AI 보안 과제서 OT 설비 보안 전담",
+   "link": "https://zdnet.co.kr/view/?no=20261017163413",
+   "source": "ZDNet Korea",
+   "pub": "2026-10-17T07:34:13.000Z",
+   "summary": "[지디넷코리아]OT 보안 전문기업 센스톤(대표 유창훈)은 과학기술정보통신부와 정보통신산업진흥원(NIPA)이 추진하는 ‘협업지능 시스템을 위한 피지컬AI 기반 다중 계층 보안 기술 개발’ 국책 과제의",
+   "n": 1
+  },
+  {
+   "title": "깃허브 \"AI시대 개발 환경, 명령에서 의도로\"…앰비언트 인텔리전스 제시",
+   "link": "https://zdnet.co.kr/view/?no=20261017112854",
+   "source": "ZDNet Korea",
+   "pub": "2026-10-17T07:12:51.000Z",
+   "summary": "[지디넷코리아]인공지능(AI) 시대의 새로운 개발 환경으로 '앰비언트 인텔리전스(Ambient Intelligence)'가 제시됐다. AI 에이전트가 작업 계획과 실행, 검증을 맡고 개발자는 방향 ",
+   "n": 1
+  },
+  {
+   "title": "오픈AI, 크롬용 '챗GPT' 확장 기능 강화...\"열린 탭 분석하고 직접 제어\"",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=216360",
+   "source": "AI타임스",
+   "pub": "2026-10-17T06:40:58.000Z",
+   "summary": "오픈AI가 '챗GPT'와 구글 크롬 브라우저의 통합을 강화했다. 챗GPT가 사용자가 열어 둔 여러 탭의 정보를 한꺼번에 분석하는 것은 물론, 탭을 직접 제어해 양식 작성이나 자료 정리 같은 작업도 ",
+   "n": 1
+  },
+  {
+   "title": "[AI 이슈트렌드] 삼전 최대 실적에도 코스피 붕괴…쿠팡 먹통·인천 흉기난동 등 주목",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=216363",
+   "source": "AI타임스",
+   "pub": "2026-10-17T06:17:31.000Z",
+   "summary": "AI타임스와 이스트에이드의 10월 둘째 주(10월9일~15일) 이슈 분석 결과, 코스피 급락을 포함한 증시 이슈와 쿠팡 서비스 장애, 인천 흉기 난동 등이 상위권을 차지했다.이번 주 검색량 1위는 ",
+   "n": 1
+  },
+  {
+   "title": "글로벌 정부 AI CITY 혁신 서밋 성황리 개최",
+   "link": "https://zdnet.co.kr/view/?no=20261017151013",
+   "source": "ZDNet Korea",
+   "pub": "2026-10-17T06:10:13.000Z",
+   "summary": "[지디넷코리아]—화웨이(Huawei), 14개 파트너와 글로벌 AI CITY 혁신 및 발전 생태계 연합(Global AI CITY Innovation & Development Ecosystem Al",
+   "n": 1
+  }
+ ]
+}
