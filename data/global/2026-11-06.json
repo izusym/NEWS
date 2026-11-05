@@ -1,0 +1,102 @@
+{
+ "date": "2026-11-06",
+ "collected": "2026-11-06 06:34",
+ "headlines": [
+  {
+   "title": "[속보] 뉴욕증시 급락…나스닥 5.52% ↓",
+   "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFAxcncxXzVCUHlpNTIxUlNvWk9DUV9UUGlScmlGVzZDZ3NTaHpmd2VfZkZRMzRjVnBRVHcyWWUyeTdEcFJLeVNfcm50WG40WERCc2czQw?oc=5",
+   "source": "이투데이",
+   "pub": "2026-11-05T21:08:00.000Z",
+   "summary": "",
+   "n": 26
+  },
+  {
+   "title": "[뉴욕 증시] 美 중간선거 ‘블루 웨이브’에 일제히 상승 … 국제유가 8% 넘게 급락",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9ZRXcxSGhzbnV5YmUxeXN4empVcWFoTkpDMTR0SnljaWU4Y0pMWmtpTUlmazZSLU14b0pzV2JiNDY3VHZPMUx0X190TU05eENIWmZaVkdYU0FYSkVZR3hLZ2FsSUpEa3lMbV8zWnVobG1FQQ?oc=5",
+   "source": "한양경제",
+   "pub": "2026-11-05T00:42:58.000Z",
+   "summary": "",
+   "n": 5
+  },
+  {
+   "title": "中 \"美농산물 수입 확대, 300억달러 관세 동시인하부터 이행돼야\"",
+   "link": "https://www.hankyung.com/article/2026110592927",
+   "source": "한국경제",
+   "pub": "2026-11-05T10:01:49.000Z",
+   "summary": "",
+   "n": 2
+  },
+  {
+   "title": "美하원, 헤그세스 국방장관 탄핵 추진…이르면 내주 표결",
+   "link": "https://www.hankyung.com/article/2026110586047",
+   "source": "한국경제",
+   "pub": "2026-11-05T06:26:56.000Z",
+   "summary": "",
+   "n": 2
+  },
+  {
+   "title": "메타 사장 \"美 신규 데이터센터 건설 매우 어려워질 것\"",
+   "link": "https://www.hankyung.com/article/2026110585817",
+   "source": "한국경제",
+   "pub": "2026-11-05T06:21:19.000Z",
+   "summary": "",
+   "n": 2
+  },
+  {
+   "title": "[속보][뉴욕증시] AI 테마 붕괴에 폭락…'속슬' 39%↓",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1QRk15V0hSQWRnbEx5WFVranJJWENxUk1MNUZNdVBtTEhlOTBCdFNJUHVEdl9OQkNKcElHbTdjT01CNTB0bWZ4VHdkNUJPckdOSGhiSWVfM3FIQQ?oc=5",
+   "source": "파이낸셜뉴스",
+   "pub": "2026-11-05T21:01:43.000Z",
+   "summary": "",
+   "n": 1
+  },
+  {
+   "title": "[오늘의 경제뉴스] 같은 AI 투자 둔화인데…미국 증시 웃고 한국 증시 우는 이유",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9YZC1uemJ5SC13dzRuU0QxUGNob0dISHB2WWR2MTExTGxNRDJvcmpkcjJyLS16WWFWWV81bXo1Qlo5MlF3czVfTElRODRnRW9DUWpnVU1GRzlvSE95bnk3RkJwQ2lpcmFBYkE?oc=5",
+   "source": "뉴스버스",
+   "pub": "2026-11-05T20:47:36.000Z",
+   "summary": "",
+   "n": 1
+  },
+  {
+   "title": "미국증시 마감 49분 前...4대지수 · 반도체주 · AI기술주 '폭락'",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9mQXRqVFpyVTdrSVYxZmtHV2tKN0Z2UE1MMXJlcmpPNDZ0WE1sTjRFZ2d2ZUExbjFkVDYxc1hVSXhjQS1mZHJoVUI5dXRtU2hVNkdFQ2wwa0hJZTZxYk03di0xQ2dZNlF4MU1KR1ZMMkXSAXNBVV95cUxORzdXdlRKanhnYVZsWlpPTjA4VEU2YmxiVTJDVzhNcjd2OVlFemY4bEx6V1VVeUEzeXdkcmctUU51bGdPcldEbExyNkEtUEdSUlZleEhfQ0hCY3FVRzNJUER4Y2RlUmx3T09ReWJCTk5ZakFR?oc=5",
+   "source": "초이스경제",
+   "pub": "2026-11-05T20:41:57.000Z",
+   "summary": "",
+   "n": 1
+  },
+  {
+   "title": "구글·메타·틱톡, 캘리포니아 청소년 SNS 규제에 제각기 소송",
+   "link": "https://www.yna.co.kr/view/AKR20261106006500091",
+   "source": "연합뉴스",
+   "pub": "2026-11-05T20:32:22.000Z",
+   "summary": "(샌프란시스코=연합뉴스) 권영전 특파원 = 구글과 메타, 틱톡이 청소년 사회관계망서비스(SNS)에 알고리즘 기반 추천 게시물 제공을 금지한 캘리...",
+   "n": 1
+  },
+  {
+   "title": "美공화당 지지층 균열 조짐…\"마가에 모욕당한 당원들 격분\"",
+   "link": "https://www.yna.co.kr/view/AKR20261106006200071",
+   "source": "연합뉴스",
+   "pub": "2026-11-05T20:11:49.000Z",
+   "summary": "(워싱턴=연합뉴스) 홍정규 특파원 = 미국 중간선거에서 참패한 공화당의 지지층에 균열 조짐이 뚜렷해졌다. 그 원인과 해법을 찾지 못하는 한 2년...",
+   "n": 1
+  },
+  {
+   "title": "이란 고위 관리 \"카타르 통해 美에 핵 제안서 전달…검토 중\"",
+   "link": "https://www.yna.co.kr/view/AKR20261106006400079",
+   "source": "연합뉴스",
+   "pub": "2026-11-05T19:59:21.000Z",
+   "summary": "(카이로=연합뉴스) 김상훈 특파원 = 이란이 중재국인 카타르를 통해 미국에 핵 제안서를 전달했다고 로이터 통신이 이란 고위 관리를 인용해 5일(...",
+   "n": 1
+  },
+  {
+   "title": "'금리동결 반대' 연준 위원 \"긴축 필요…작고 잦은 조정 선호\"",
+   "link": "https://www.yna.co.kr/view/AKR20261106006000072",
+   "source": "연합뉴스",
+   "pub": "2026-11-05T19:57:16.000Z",
+   "summary": "(뉴욕=연합뉴스) 김연숙 특파원 = 베스 해맥 미국 클리블랜드 연방준비은행(연은) 총재는 인플레이션을 연방준비제도(Fed·연준)의 목표치로 되돌...",
+   "n": 1
+  }
+ ]
+}
