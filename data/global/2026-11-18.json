@@ -1,0 +1,102 @@
+{
+ "date": "2026-11-18",
+ "collected": "2026-11-18 11:41",
+ "headlines": [
+  {
+   "title": "뉴욕증시, 엔비디아 실적 발표 앞두고 하락 마감…다우 1.64%↓",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5zcUx5bHJzRV9LSlJWVmxVU2NGUDMzZnFzMzVEdldiWTFXOFYxSmlmWE83UV81S0NoLVFFMmNHZDdwV0VFM0xGN19Ndk5jWllJRFdwc01zZG9ieFpZSjRLYw?oc=5",
+   "source": "증권일보",
+   "pub": "2026-11-17T22:08:58.000Z",
+   "summary": "",
+   "n": 23
+  },
+  {
+   "title": "뉴욕증시, 하락세 계속…S&P500 1%↓, 7월 이후 최저(종합)",
+   "link": "https://www.yna.co.kr/view/AKR20261118011351072",
+   "source": "연합뉴스",
+   "pub": "2026-11-17T22:28:40.000Z",
+   "summary": "(뉴욕=연합뉴스) 김연숙 특파원 = 17일(현지시간) 미국 뉴욕 증시 주요 3대 지수가 일제히 하락했다.",
+   "n": 15
+  },
+  {
+   "title": "엔비디아, 호실적에 시간외 4.8%↑…AI인프라주 동반 반등(종합)",
+   "link": "https://www.yna.co.kr/view/AKR20261118015951009",
+   "source": "연합뉴스",
+   "pub": "2026-11-18T01:33:29.000Z",
+   "summary": "(서울=연합뉴스) 정주호 기자 = 엔비디아가 17일(현지시간) 시장 예상을 웃도는 실적과 가이던스(전망)를 내놓으면서 시간외 거래에서 4.8% ...",
+   "n": 4
+  },
+  {
+   "title": "삼성전기, 엔비디아와 AI 동맹 강화에 8%대 '급등'",
+   "link": "https://www.hankyung.com/article/2026111836896",
+   "source": "한국경제",
+   "pub": "2026-11-18T00:14:44.000Z",
+   "summary": "",
+   "n": 2
+  },
+  {
+   "title": "엔비디아 의장, '젠슨황 복귀' 일축…\"재선임 의사 없다\"(종합)",
+   "link": "https://www.yna.co.kr/view/AKR20261118018251091",
+   "source": "연합뉴스",
+   "pub": "2026-11-17T23:06:03.000Z",
+   "summary": "(샌프란시스코=연합뉴스) 권영전 특파원 = 엔비디아 이사회는 17일(현지시간) 불륜 스캔들로 불명예 퇴진한 젠슨 황 전 최고경영자(CEO)를 재...",
+   "n": 2
+  },
+  {
+   "title": "뉴욕증시 3대 지수 일제히 하락...다우 848포인트 급락",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE00YUhUcEpyYjBTTWdueG40dmpKQ05jaXdhcGkxQXFwckMta1V1Yjg0R0dMVVctTEl6VzQyYm5QRmpCeG1UakVPSlE4aHk1YlVkangwU2M0LUlXUDJ6ZE5RVGhMaWRFQUU?oc=5",
+   "source": "M이코노미뉴스",
+   "pub": "2026-11-17T22:44:47.000Z",
+   "summary": "",
+   "n": 10
+  },
+  {
+   "title": "앤트로픽 공모주, 19일 나스닥 상장 예정…공모가 78달러 돌파하나",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBncVRlUDBkT0kyTTFZYWlXTFdiN1FLV1RWTTladmM5TzZLVk5YM0VRYmtTb3FWZDYzYWM4Mkg2NjVGalAzVnlMRFpGSWpMbG1RcmVpVWNPc1pYMFBjdmZQSGxFMWllVzBL?oc=5",
+   "source": "CBC뉴스",
+   "pub": "2026-11-18T01:28:42.000Z",
+   "summary": "",
+   "n": 2
+  },
+  {
+   "title": "[뉴욕증시 17일] 잇따른 인프라 장애에 투자심리 위축",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9ZMU41R1ZBdGo1bEp0U2hLTURta0ZLLU1SMTUzNTN1Wk9MVDhzVjlwMXNrQXM5UGRBWnhyak83enpmM1FIMGFEZjFuTURJRF9Fbzh0ZnJ0dnBjQnhtX1J4MUZwaEVBSXVDYjZ5QlN2MGZBbGdEWHc?oc=5",
+   "source": "미주조선일보",
+   "pub": "2026-11-18T00:06:49.000Z",
+   "summary": "",
+   "n": 2
+  },
+  {
+   "title": "\"다우 1.64%·나스닥 0.74% 내리고 비트코인 2.07% 하락\"",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9sTllyRFNoY3kyd1lveFpwYklveHVxWklqeFA5VzhxMjdNVFZVMWR5c2JRYThPYnJ6eU5EVGFfZXBfcG1vRmxOWi1COWlEM1VaNGlxdVlLQlZvVzhJN0NLYmxrQmlhR3VrMWloR29B?oc=5",
+   "source": "국제뉴스",
+   "pub": "2026-11-17T22:29:21.000Z",
+   "summary": "",
+   "n": 2
+  },
+  {
+   "title": "美국무장관 \"북미 정상회담 아직 안 잡혀…트럼프는 진지\"",
+   "link": "https://www.yna.co.kr/view/AKR20261118071551009",
+   "source": "연합뉴스",
+   "pub": "2026-11-18T02:09:15.000Z",
+   "summary": "(워싱턴=연합뉴스) 홍정규 특파원 = 도널드 트럼프 미국 대통령 방중 기간에 김정은 북한 국무위원장과의 회담은 아직 예정돼 있지 않지만, 회담할...",
+   "n": 1
+  },
+  {
+   "title": "엔비디아, 고객사에 \"中 원격접속 허용땐 법적조치\" 경고",
+   "link": "https://www.yna.co.kr/view/AKR20261118070300009",
+   "source": "연합뉴스",
+   "pub": "2026-11-18T01:44:41.000Z",
+   "summary": "(서울=연합뉴스) 주종국 기자 = 엔비디아가 중국 기업들이 자사 인공지능(AI) 칩에 원격으로 접근하는 것을 막는 새 법안이 시행될 경우 엔비디...",
+   "n": 1
+  },
+  {
+   "title": "美 Fed, AI가 경제에 미칠 충격 분석 착수…고용·증시 영향 시나리오 검토",
+   "link": "https://www.hankyung.com/article/202611183961i",
+   "source": "한국경제",
+   "pub": "2026-11-18T01:22:38.000Z",
+   "summary": "",
+   "n": 1
+  }
+ ]
+}
