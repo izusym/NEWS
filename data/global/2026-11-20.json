@@ -1,0 +1,102 @@
+{
+ "date": "2026-11-20",
+ "collected": "2026-11-20 10:58",
+ "headlines": [
+  {
+   "title": "[글로벌증시] 美증시, 앤트로픽 상장에도 하락…나스닥 2%대↓",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE16UnU0Zm9ldHZxVElJWTY5QXByLURPR1hVQUhWeFptSy1GbTdfaWNnT0hZLXc5NWpZWWg4Z2stQjFGSUdLVk1oWjE2TlJaN3FUOXRpeVNUVnItRnc0TmhtTmE4QXRubGs?oc=5",
+   "source": "연합뉴스TV",
+   "pub": "2026-11-19T21:54:00.000Z",
+   "summary": "",
+   "n": 20
+  },
+  {
+   "title": "뉴욕증시, 2%대 급락..다우 5만선 아래로 ↓",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1xNmFla0U3VGt6MEM5OE85RWF6X1Z6TW9xMklVX0JPLUtVemU4VldJQUU5RTQ4RU9LX3dUdE95aXliVnBlZkE4Q0JkbU5JOGVLdzY5bVk5MEgyNzd0RkhsSHIyOThHaUVDYWkya1hlNA?oc=5",
+   "source": "뉴스톱",
+   "pub": "2026-11-19T23:51:59.000Z",
+   "summary": "",
+   "n": 14
+  },
+  {
+   "title": "엔비디아 이어 AMD도 '中 리스크'…삼전닉스 또 '와르르'",
+   "link": "https://www.hankyung.com/article/2026112092776",
+   "source": "한국경제",
+   "pub": "2026-11-20T00:34:19.000Z",
+   "summary": "",
+   "n": 2
+  },
+  {
+   "title": "AI주 팔아 앤트로픽? 뉴욕증시 돈이 말랐다",
+   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBDSU9SM3NUdjVGZ05VdG5RbEhOM0I4ZGtpbmFrMnNIRVVRTjRDd0hocEg2dXhhTXY5eWNDQk80R2l6R2dHUzBVSWV1bV9xMDd3VjRka3V5elhaNGJzbnc?oc=5",
+   "source": "YTN",
+   "pub": "2026-11-19T21:48:00.000Z",
+   "summary": "",
+   "n": 2
+  },
+  {
+   "title": "美 스타트업 암페라, 스팩 합병으로 나스닥 입성…AI 전력난 정조준",
+   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9VazJrQTdTaXMybmxFWHpTQXB1SnpaVmRxNTBOSzN5aURoajB5LTNrcTFITVN5eUkzbnZ6YWlWNjRoRnA0NkJaaXBrbjlwY29yVG9hT2pzMjZvZ25IOEdSRWxIdw?oc=5",
+   "source": "더구루",
+   "pub": "2026-11-20T00:55:11.000Z",
+   "summary": "",
+   "n": 1
+  },
+  {
+   "title": "JP모건 \"美연준, 내년 3월까지 3연속 금리인상할 것\"",
+   "link": "https://www.yna.co.kr/view/AKR20261120049100009",
+   "source": "연합뉴스",
+   "pub": "2026-11-20T00:53:02.000Z",
+   "summary": "(서울=연합뉴스) 정주호 기자 = JP모건은 19일(현지시간) 미국 연방준비제도(Fed·연준)가 12월에 이어 내년 1월과 3월에도 기준금리를 ...",
+   "n": 1
+  },
+  {
+   "title": "알파벳, 캐나다서 회사채 발행해 5조6천억원 조달",
+   "link": "https://www.yna.co.kr/view/AKR20261120047300009",
+   "source": "연합뉴스",
+   "pub": "2026-11-20T00:51:52.000Z",
+   "summary": "(서울=연합뉴스) 주종국 기자 = 구글 모회사 알파벳이 캐나다 달러 표시 회사채를 발행해 60억 캐나다달러(약 42억달러·5조6천100억원)를 ...",
+   "n": 1
+  },
+  {
+   "title": "코스피, 다시 5000선 밑에서 출발…미 나스닥 2%대 급락 여파[개장시황]",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBuVkZudUVTS3ZMNm5PZzB1VnhhS3ViWTRSd3YtRlFVV1d4LVVyeTNaYnFOVTRkNHlodTJNN2RTRDZ4eWtxR1BVSllhLXNuQmNMU3JERGxDTXRXNEE?oc=5",
+   "source": "에너지경제신문",
+   "pub": "2026-11-20T00:37:02.000Z",
+   "summary": "",
+   "n": 1
+  },
+  {
+   "title": "美 이란전 비용 64조원 돌파…정치권 '눈덩이' 공방 격화",
+   "link": "https://www.yna.co.kr/view/AKR20261120034200009",
+   "source": "연합뉴스",
+   "pub": "2026-11-20T00:31:36.000Z",
+   "summary": "(서울=연합뉴스) 임화섭 기자 = 미국이 이란 전쟁에 쓴 비용이 이달 13일 기준으로 약 483억 달러(64조4천억 원)에 이른다는 국방부 추정...",
+   "n": 1
+  },
+  {
+   "title": "앤트로픽 IPO에 日 12조원 이상 몰렸는데…韓 공모 청약 빠진 이유",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4xeEM3Tm55a2c2Yi1wOEJES3RmLXd6Q1FPSGtnVG1KSlpTazNVMHRYUFpuUE8wMEhUQ2F2dWwyTXlBYkpoNlFMeEd3aEdHczgwdmd2X2ZB?oc=5",
+   "source": "지디넷코리아",
+   "pub": "2026-11-20T00:24:52.000Z",
+   "summary": "",
+   "n": 1
+  },
+  {
+   "title": "美연준 고위인사 \"AI로 경제 과열…모든 선택지 가능\"",
+   "link": "https://www.yna.co.kr/view/AKR20261120031500072",
+   "source": "연합뉴스",
+   "pub": "2026-11-20T00:14:15.000Z",
+   "summary": "(뉴욕=연합뉴스) 김연숙 특파원 = 미국 연방준비제도(Fed·연준) 고위 인사들이 물가 상승 지속세와 인공지능(AI) 인프라 확장세에 잇따라 경...",
+   "n": 1
+  },
+  {
+   "title": "[뉴욕 증시] AMD, 中 수출 통제 규제 위반 소식...3대 지수 일제히 하락",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE14VHZKOXFJbTltS3JrY0hTZ1p0UC1pcFRQU0tsOFlUTjd3ZWxjbWpWUmFQSzN5TDZQazZ6cnhWRFZTV2VpZWdhYk1OSFJpZ19SQmxvTW11ZmZaRnVKVGRoNUQ0NXlHUXVseG9TUVZmWHpHUQ?oc=5",
+   "source": "한양경제",
+   "pub": "2026-11-20T00:10:40.000Z",
+   "summary": "",
+   "n": 1
+  }
+ ]
+}
